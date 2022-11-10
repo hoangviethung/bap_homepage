@@ -1,0 +1,279 @@
+.header-default {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    height: 112px;
+}
+
+.header-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    left: 60px;
+    padding: 0 16px;
+    height: 72px;
+    background-color: #ffffff;
+    backdrop-filter: blur(2px);
+    border-radius: 45px;
+}
+
+.header-logo {
+    display: block;
+    overflow: hidden;
+    height: 72px;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    img {
+        width: 100%;
+        height: 48px;
+    }
+}
+
+.header-function {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-nav__items {
+    display: flex;
+    align-items: center;
+    .nav__item {
+        + .nav__item {
+            margin-left: 36px;
+        }
+        > a {
+            transition: 0.3s color ease-in-out;
+            &:not(.btn) {
+                font-size: 1.125rem;
+                &:hover {
+                    color: map-get($map: $theme-colors, $key: "secondary");
+                }
+            }
+        }
+        a {
+            font-weight: 700;
+            &:not(.btn) {
+                color: inherit;
+                &.nav-sub-item-title {
+                    &:hover {
+                        color: map-get($map: $theme-colors, $key: "secondary");
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-sub-items-wrapper {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    padding: 100px 68px 56px;
+    pointer-events: none;
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: #ffffff;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        z-index: -1;
+        border-radius: 0 0 30px 30px;
+        transition: height 0.5s 0s cubic-bezier(1, -0.02, 0.38, 0.96);
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 36px;
+        left: 16px;
+        right: 16px;
+        height: 4px;
+        background-color: map-get($map: $theme-colors, $key: "border");
+        border-radius: 2px;
+        opacity: 0;
+        transition: 0.3s opacity ease-in-out;
+    }
+    &.menu-item-hovered {
+        pointer-events: visible;
+        transition-delay: 1s;
+        &:after {
+            height: 100%;
+        }
+        &:before {
+            opacity: 1;
+        }
+        .nav-sub-item-heading,
+        .nav-sub-items {
+            opacity: 1;
+            transition-delay: 0.5s, 0.5s;
+            transform: translateY(0);
+        }
+    }
+}
+
+.nav-sub-item-heading,
+.nav-sub-items {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: 0.2s opacity ease-in-out,
+        0.8s transform cubic-bezier(0.23, 1, 0.58, 1);
+}
+
+.nav-sub-item-heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.nav-sub-item-title {
+    position: relative;
+    font-size: 3rem;
+    padding-right: 24px;
+    transition: 0.3s all ease-in-out;
+    font-family: map-get($map: $theme-fonts, $key: "title");
+    &:after {
+        content: "\f105";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        color: map-get($map: $theme-colors, $key: "secondary");
+        font-family: map-get($map: $theme-fonts, $key: "icons");
+    }
+    &:hover {
+        padding-right: 32px;
+    }
+}
+
+.nav-sub-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+    .sub__item {
+        a {
+            font-size: 1.25rem;
+            position: relative;
+            display: block;
+            padding: 16px 16px 16px;
+            border-bottom: 2px solid
+                map-get($map: $theme-colors, $key: "border");
+            transition: 0.3s color cubic-bezier(0.4, 0, 0.22, 1);
+            &:after {
+                content: "\f105";
+                color: map-get($map: $theme-colors, $key: "secondary");
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-family: map-get($map: $theme-fonts, $key: "icons");
+                pointer-events: none;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 0;
+                background-color: rgba(
+                    $color: map-get($map: $theme-colors, $key: "secondary"),
+                    $alpha: 0.05
+                );
+                transition: 0.3s width cubic-bezier(0.4, 0, 0.22, 1);
+                pointer-events: none;
+            }
+            &:hover {
+                color: map-get($map: $theme-colors, $key: "secondary");
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.languages-mobile {
+    display: none;
+    @media (max-width: 1024.98px) {
+        display: block;
+    }
+}
+
+.languages-desktop {
+    margin-left: 16px;
+    @media (max-width: 1024.98px) {
+        display: none;
+    }
+}
+
+.languages {
+    display: flex;
+    align-items: center;
+    .dropdown-menu {
+        .language-name {
+            color: map-get($map: $theme-colors, $key: "txt-body");
+        }
+        .button-choose-language {
+            &:after {
+                content: none;
+            }
+        }
+    }
+}
+
+.button-choose-language {
+    cursor: pointer;
+    &:after {
+        content: "\f107";
+        font-family: map-get($map: $theme-fonts, $key: "icons");
+        font-size: 1rem;
+        margin-left: 8px;
+    }
+    &:not(.dropdown-item) {
+        background-color: rgba(
+            $color: map-get($map: $theme-colors, $key: "secondary"),
+            $alpha: 0.08
+        );
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+    }
+}
+
+$language-icon-size: 32px;
+
+.language-icon {
+    flex: 0 0 $language-icon-size;
+    max-width: $language-icon-size;
+    height: $language-icon-size;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+        object-fit: contain;
+        object-position: center center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.language-name {
+    font-size: 1.125rem;
+    margin-left: 8px;
+    font-weight: 700;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    user-select: none;
+}

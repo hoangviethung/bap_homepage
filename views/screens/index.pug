@@ -1,0 +1,11 @@
+extends ../layouts/layout
+
+block params
+    - class_body = "home-page"
+    - title_page = "BAP Software - Home"
+block css
+    link(rel="stylesheet", href="./assets/css/home.css")
+block js
+    script(src="./assets/js/home.js")
+block main
+    include ../components/hero-banner-01
