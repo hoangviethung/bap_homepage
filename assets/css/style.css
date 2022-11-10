@@ -18009,8 +18009,8 @@ progress {
   padding: 0 16px;
   height: 72px;
   background-color: #ffffff;
-  backdrop-filter: blur(2px);
   border-radius: 45px;
+  transition: 0.3s all ease-in-out;
 }
 
 .header-logo {
@@ -18293,7 +18293,7 @@ progress {
 }
 
 .hero-banner-01-swiper .swiper-container.swiper-container-initialized .swiper-slide:not(.swiper-slide-active) {
-  transform: scale(0.55);
+  transform: scale(0.5);
 }
 
 .hero-banner-01-swiper .swiper-container.swiper-container-initialized .swiper-slide:not(.swiper-slide-active) .banner-image {
@@ -18310,19 +18310,20 @@ progress {
   bottom: 48px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 240px;
+  left: 94px;
+  right: 94px;
 }
 
 .hero-banner-01-swiper .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0;
+  margin: 0 16px 0 0;
   opacity: 1;
 }
 
 .hero-banner-01-swiper .swiper-pagination-bullet {
-  width: 16px;
+  width: 48px;
   height: 16px;
   transition: 0.3s all cubic-bezier(0.74, -0.35, 0.81, 1.25);
+  border-radius: 8px;
 }
 
 .hero-banner-01-swiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
@@ -18331,7 +18332,6 @@ progress {
 
 .hero-banner-01-swiper .swiper-pagination-bullet-active {
   background-color: #0057e2;
-  transform: scale(1.5);
 }
 
 .hero-banner-01-swiper .banner-image {
@@ -18361,7 +18361,7 @@ progress {
   margin: auto;
   width: 100%;
   height: 30%;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(transparent, black);
 }
 
 .hero-banner-01-swiper .banner-content {
@@ -18385,69 +18385,6 @@ progress {
 .hero-banner-01-swiper .banner-category {
   font-size: 2rem;
   margin-top: 8px;
-}
-
-.hero-banner-01-swiper .swiper-progress-bar-container {
-  position: absolute;
-  left: 256px;
-  right: 256px;
-  bottom: 48px;
-  height: 16px;
-  display: flex;
-  align-items: center;
-  z-index: 5;
-}
-
-.hero-banner-01-swiper .swiper-progress-bar-container .swiper-progress-bar {
-  position: relative;
-  height: 2px;
-  width: 100%;
-  background-color: #ffffff;
-}
-
-.hero-banner-01-swiper .swiper-progress-bar-container .swiper-progress-bar .progress {
-  left: 0;
-  top: 0;
-  position: absolute;
-  height: 100%;
-  background: #0057e2;
-  z-index: 1;
-}
-
-.hero-banner-01-swiper .swiper-progress-bar-container .swiper-progress-bar .progress-sections {
-  left: 0;
-  top: 0;
-  position: absolute;
-  height: inherit;
-  width: inherit;
-  z-index: 2;
-  display: flex;
-}
-
-.hero-banner-01-swiper .swiper-progress-bar-container .swiper-progress-bar .progress-sections span {
-  position: relative;
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
-  height: inherit;
-}
-
-.hero-banner-01-swiper .swiper-progress-bar-container .swiper-progress-bar .progress-sections span:after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background-color: #ffffff;
-  transition: 0.3s all cubic-bezier(0.74, -0.35, 0.81, 1.25);
-}
-
-.hero-banner-01-swiper .swiper-progress-bar-container .swiper-progress-bar .progress-sections span.active:after {
-  background-color: #0057e2;
-  transform: translateY(-50%) scale(1.5);
 }
 
 /*# sourceMappingURL=style.css.map */

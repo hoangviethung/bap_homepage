@@ -8,7 +8,7 @@
         &.swiper-container-initialized {
             .swiper-slide {
                 &:not(.swiper-slide-active) {
-                    transform: scale(0.55);
+                    transform: scale(0.5);
                     .banner-image {
                         border-radius: 32px;
                     }
@@ -25,28 +25,28 @@
         bottom: 48px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 0 240px;
+        left: 94px;
+        right: 94px;
     }
     .swiper-container-horizontal {
         > .swiper-pagination-bullets {
             .swiper-pagination-bullet {
-                margin: 0;
+                margin: 0 16px 0 0;
                 opacity: 1;
             }
         }
     }
     .swiper-pagination-bullet {
-        width: 16px;
+        width: 48px;
         height: 16px;
         transition: 0.3s all cubic-bezier(0.74, -0.35, 0.81, 1.25);
+        border-radius: 8px;
         &:not(.swiper-pagination-bullet-active) {
             background: #ffffff;
         }
     }
     .swiper-pagination-bullet-active {
         background-color: map-get($map: $theme-colors, $key: "secondary");
-        transform: scale(1.5);
     }
     .banner-image {
         position: relative;
@@ -72,7 +72,7 @@
             margin: auto;
             width: 100%;
             height: 30%;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            background: linear-gradient(transparent, rgba(0, 0, 0, 1));
         }
     }
     .banner-content {
@@ -93,67 +93,5 @@
     .banner-category {
         font-size: 2rem;
         margin-top: 8px;
-    }
-    .swiper-progress-bar-container {
-        position: absolute;
-        left: 256px;
-        right: 256px;
-        bottom: 48px;
-        height: 16px;
-        display: flex;
-        align-items: center;
-        z-index: 5;
-        .swiper-progress-bar {
-            position: relative;
-            height: 2px;
-            width: 100%;
-            background-color: #ffffff;
-            .progress {
-                left: 0;
-                top: 0;
-                position: absolute;
-                height: 100%;
-                background: map-get($map: $theme-colors, $key: "secondary");
-                z-index: 1;
-            }
-            .progress-sections {
-                left: 0;
-                top: 0;
-                position: absolute;
-                height: inherit;
-                width: inherit;
-                z-index: 2;
-                display: flex;
-                span {
-                    position: relative;
-                    flex-basis: 0;
-                    flex-grow: 1;
-                    max-width: 100%;
-                    height: inherit;
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        width: 16px;
-                        height: 16px;
-                        left: 0;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        border-radius: 50%;
-                        background-color: #ffffff;
-                        transition: 0.3s all
-                            cubic-bezier(0.74, -0.35, 0.81, 1.25);
-                    }
-                    &.active {
-                        &:after {
-                            background-color: map-get(
-                                $map: $theme-colors,
-                                $key: "secondary"
-                            );
-                            transform: translateY(-50%) scale(1.5);
-                        }
-                    }
-                }
-            }
-        }
     }
 }
