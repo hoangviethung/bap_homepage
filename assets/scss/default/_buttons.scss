@@ -13,6 +13,11 @@
     border-radius: 2rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
         border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    > span {
+        ~ i {
+            margin-left: 4px;
+        }
+    }
 }
 
 .btn-sm {

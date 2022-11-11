@@ -2,13 +2,15 @@
   --color-primary: #062350;
   --color-secondary: #0057e2;
   --color-txt-body: #202121;
-  --color-background-1: #f4f7f6;
+  --color-txt-disable: #bbbbbb;
+  --color-background-1: #ffffff;
   --color-border: #eef1f5;
   --color-success: #09c253;
   --color-info: #1470eb;
   --color-warning: #f9b506;
   --color-error: #da0b0b;
   --font-body: Varta;
+  --font-title: Signika;
   --font-icons: Font Awesome 5 Pro;
 }
 
@@ -184,7 +186,7 @@
 
 .container {
   position: relative;
-  max-width: 992px;
+  max-width: 1440px;
   margin: 0 auto;
   padding-left: 66px;
   padding-right: 66px;
@@ -1140,7 +1142,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   color: #202121;
-  background-color: #f4f7f6;
+  background-color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -17467,6 +17469,10 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.btn > span ~ i {
+  margin-left: 4px;
+}
+
 .btn-sm {
   padding: 0.375rem 0.75rem;
   border-radius: 0.25rem;
@@ -17662,6 +17668,38 @@ progress {
 
 .btn-outline-error:focus {
   box-shadow: 0 0 0 0.25rem rgba(218, 11, 11, 0.2);
+}
+
+.tab-content > .tab-pane {
+  display: none;
+}
+
+.tab-content > .active {
+  display: block;
+}
+
+.tab-content .fade {
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+.tab-content .fade.show {
+  opacity: 1;
+}
+
+.title-default-01 h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0057e2;
+}
+
+.title-default-01 h2 {
+  font-size: 3.125rem;
+  color: #062350;
+}
+
+.title-default-01 p {
+  font-size: 0.875rem;
 }
 
 .dropdown {
@@ -18252,7 +18290,6 @@ progress {
 }
 
 .button-choose-language:not(.dropdown-item) {
-  background-color: rgba(0, 87, 226, 0.08);
   padding: 0.5rem 1rem 0.5rem 0.5rem;
 }
 

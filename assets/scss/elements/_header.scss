@@ -244,10 +244,6 @@
         margin-left: 8px;
     }
     &:not(.dropdown-item) {
-        background-color: rgba(
-            $color: map-get($map: $theme-colors, $key: "secondary"),
-            $alpha: 0.08
-        );
         padding: 0.5rem 1rem 0.5rem 0.5rem;
     }
 }

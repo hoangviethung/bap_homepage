@@ -1,0 +1,14 @@
+.title-default-01 {
+    h3 {
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: map-get($map: $theme-colors, $key: "secondary");
+    }
+    h2 {
+        font-size: 3.125rem;
+        color: map-get($map: $theme-colors, $key: "primary");
+    }
+    p {
+        font-size: 0.875rem;
+    }
+}

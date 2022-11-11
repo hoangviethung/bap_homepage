@@ -11,7 +11,81 @@ block main
     include ../components/hero-banner-01
     section.our-services-01
         .container
-            .title-default
-                h3 OUR SERVICES
-                h2 Global SDaaS / Blockchain & IT Consulting
-                p Our dedicated and highly professional team strives to provide our global clients with full-stack solutions by multiple platforms, languages in a timely manner.
+            .our-services-wrapper
+                .title-default-01
+                    h3 OUR SERVICES
+                    h2 Global SDaaS /
+                        br 
+                        | Blockchain & IT Consulting
+                    p Our dedicated and highly professional team strives to provide our global clients with
+                        br
+                        | full-stack solutions by multiple platforms, languages in a timely manner.
+                .our-services
+                    ul.nav.nav-tabs(role='tablist')
+                        li.nav-item
+                            a.nav-link.active(data-toggle='tab' href='#ai_oit' role='tab' aria-selected='true')
+                                span 01.
+                                span AI/IOT
+                        li.nav-item
+                            a.nav-link(data-toggle='tab' href='#blockchain' role='tab' aria-selected='false')
+                                span 02.
+                                span BLOCKCHAIN
+                        li.nav-item
+                            a.nav-link(data-toggle='tab' href='#website_app' role='tab' aria-selected='false')
+                                span 03.
+                                span WEBSITE /SMARTPHONE APP
+                        li.nav-item
+                            a.nav-link(data-toggle='tab' href='#business_application' role='tab' aria-selected='false')
+                                span 04.
+                                span BUSINESS APPLICATION
+                        li.nav-item
+                            a.nav-link(data-toggle='tab' href='#sap_erp' role='tab' aria-selected='false')
+                                span 05.
+                                span SAP/ERP
+                        li.nav-item
+                            a.nav-link(data-toggle='tab' href='#game' role='tab' aria-selected='false')
+                                span 06.
+                                span GAME
+                    .tab-content
+                        #ai_oit.tab-pane.fade.show.active(role='tabpanel')
+                            img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
+                            .call-to-actions
+                                a.btn(href="#")
+                                    span Read More
+                                    i.fas.fa-long-arrow-alt-right
+                        #blockchain.tab-pane.fade(role='tabpanel')
+                            img(src="../assets/images/services/blockchain.png", alt="SERVICE-BLOCKCHAIN")
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
+                            .call-to-actions
+                                a.btn(href="#")
+                                    span Read More
+                                    i.fas.fa-long-arrow-alt-right
+                        #website_app.tab-pane.fade(role='tabpanel')
+                            img(src="../assets/images/services/blockchain.png", alt="SERVICE-BLOCKCHAIN")
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
+                            .call-to-actions
+                                a.btn(href="#")
+                                    span Read More
+                                    i.fas.fa-long-arrow-alt-right
+                        #business_application.tab-pane.fade(role='tabpanel')
+                            img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
+                            .call-to-actions
+                                a.btn(href="#")
+                                    span Read More
+                                    i.fas.fa-long-arrow-alt-right
+                        #sap_erp.tab-pane.fade(role='tabpanel')
+                            img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
+                            .call-to-actions
+                                a.btn(href="#")
+                                    span Read More
+                                    i.fas.fa-long-arrow-alt-right
+                        #game.tab-pane.fade(role='tabpanel')
+                            img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
+                            .call-to-actions
+                                a.btn(href="#")
+                                    span Read More
+                                    i.fas.fa-long-arrow-alt-right

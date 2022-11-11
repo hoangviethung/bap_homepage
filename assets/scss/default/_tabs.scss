@@ -1,0 +1,15 @@
+.tab-content {
+    > .tab-pane {
+        display: none;
+    }
+    > .active {
+        display: block;
+    }
+    .fade {
+        opacity: 0;
+        transition: opacity 0.15s linear;
+        &.show {
+            opacity: 1;
+        }
+    }
+}
