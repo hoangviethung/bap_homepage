@@ -9,7 +9,7 @@ block js
     script(src="./assets/js/home.js")
 block main
     include ../components/hero-banner-01
-    section.our-services-01
+    section.section-our-services-01
         .container
             .our-services-wrapper
                 .title-default-01
@@ -47,45 +47,112 @@ block main
                                 span 06.
                                 span GAME
                     .tab-content
-                        #ai_oit.tab-pane.fade.show.active(role='tabpanel')
+                        #ai_oit.tab-pane.show.active(role='tabpanel')
                             img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
                             .call-to-actions
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
-                        #blockchain.tab-pane.fade(role='tabpanel')
+                        #blockchain.tab-pane(role='tabpanel')
                             img(src="../assets/images/services/blockchain.png", alt="SERVICE-BLOCKCHAIN")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
                             .call-to-actions
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
-                        #website_app.tab-pane.fade(role='tabpanel')
+                        #website_app.tab-pane(role='tabpanel')
                             img(src="../assets/images/services/blockchain.png", alt="SERVICE-BLOCKCHAIN")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
                             .call-to-actions
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
-                        #business_application.tab-pane.fade(role='tabpanel')
+                        #business_application.tab-pane(role='tabpanel')
                             img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
                             .call-to-actions
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
-                        #sap_erp.tab-pane.fade(role='tabpanel')
+                        #sap_erp.tab-pane(role='tabpanel')
                             img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
                             .call-to-actions
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
-                        #game.tab-pane.fade(role='tabpanel')
+                        #game.tab-pane(role='tabpanel')
                             img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
                             .call-to-actions
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
+    section.section-global-company-01
+        .container
+            .global-wrapper
+                .text-column
+                    .title-default-01.dark
+                        h2 Global Presence
+                        p Our global offices provide seamless services worldwide.
+                            br
+                            | We code while you sleep!
+                    ul.list-site
+                        li.site__item Vietnam - Head Office
+                        li.site__item Japan - Osaka & Tokyo Office
+                .image-column
+                    .image-map
+                        img(src="../assets/images/global-company-image-map.png", alt="GLOBAL-COMPANY")
+    section.section-achievements-01
+        .container
+            .achievements
+                .achievement__item
+                    i.fas.fa-globe-asia
+                    .text
+                        h4 2
+                        p Countries
+                .achievement__item
+                    i.fas.fa-city
+                    .text
+                        h4 6
+                        p Cities
+                .achievement__item
+                    i.fas.fa-users
+                    .text
+                        h4 420
+                        p Employees
+                .achievement__item
+                    i.fas.fa-handshake-alt
+                    .text
+                        h4 100
+                        p Clients
+                .achievement__item
+                    i.fas.fa-project-diagram
+                    .text
+                        h4 220
+                        p Projects
+    section.section-clients-01
+        .title-default-01.ta-c
+            h2 Our Clients
+            p Regardless of the size and type of business of the company, there are examples of companies that using BAP developing teams.
+        .clients-01-swiper--01
+            .swiper-container
+                .swiper-wrapper
+                    -for(i=0;i<20;i++)
+                        .swiper-slide
+                            .client-logo
+                                img(src="../assets/images/clients/rakuten.png", alt="rakuten")
+                        .swiper-slide
+                            .client-logo
+                                img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
+        .clients-01-swiper--02
+            .swiper-container
+                .swiper-wrapper
+                    -for(j=0;j<20;j++)
+                        .swiper-slide
+                            .client-logo
+                                img(src="../assets/images/clients/rakuten.png", alt="rakuten")
+                        .swiper-slide
+                            .client-logo
+                                img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")

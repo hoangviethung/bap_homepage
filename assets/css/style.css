@@ -17670,23 +17670,6 @@ progress {
   box-shadow: 0 0 0 0.25rem rgba(218, 11, 11, 0.2);
 }
 
-.tab-content > .tab-pane {
-  display: none;
-}
-
-.tab-content > .active {
-  display: block;
-}
-
-.tab-content .fade {
-  opacity: 0;
-  transition: opacity 0.15s linear;
-}
-
-.tab-content .fade.show {
-  opacity: 1;
-}
-
 .title-default-01 h3 {
   font-size: 0.875rem;
   font-weight: 700;
@@ -17700,6 +17683,15 @@ progress {
 
 .title-default-01 p {
   font-size: 0.875rem;
+}
+
+.title-default-01.dark h2 {
+  font-size: 3.125rem;
+  color: #ffffff;
+}
+
+.title-default-01.dark p {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .dropdown {
@@ -17762,7 +17754,7 @@ progress {
 }
 
 .dropdown-item:not(.dropdown-item-selected):hover {
-  background-color: #072b63;
+  background-color: rgba(6, 35, 80, 0.08);
 }
 
 .dropdown-item:not(.dropdown-item-selected):active {
@@ -18110,9 +18102,9 @@ progress {
 
 .nav-sub-items-wrapper {
   position: fixed;
-  top: 50%;
-  right: 0;
-  left: 0;
+  top: calc(112px / 2);
+  right: 60px;
+  left: 60px;
   z-index: -1;
   padding: 100px 68px 56px;
   pointer-events: none;

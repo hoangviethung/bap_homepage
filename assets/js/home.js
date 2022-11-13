@@ -13,6 +13,7 @@
         },
         methods: function (e) {
             imJs.initSliderHeroBanner01();
+            imJs.initSliderClients01();
         },
         initSliderHeroBanner01() {
             const swiperHeroBanner01 = new Swiper(
@@ -27,6 +28,34 @@
                     pagination: {
                         el: ".hero-banner-01-swiper .swiper-pagination",
                         clickable: true,
+                    },
+                    on: {},
+                },
+            );
+        },
+        initSliderClients01() {
+            const swiperHeroBanner01 = new Swiper(
+                ".clients-01-swiper--01 .swiper-container",
+                {
+                    slidesPerView: 10,
+                    spaceBetween: 32,
+                    freeMode: true,
+                    speed: 3000,
+                    autoplay: {
+                        delay: 1000,
+                    },
+                    on: {},
+                },
+            );
+            const swiperHeroBanner02 = new Swiper(
+                ".clients-01-swiper--02 .swiper-container",
+                {
+                    slidesPerView: 10,
+                    spaceBetween: 32,
+                    freeMode: true,
+                    speed: 3000,
+                    autoplay: {
+                        delay: 1500,
                     },
                     on: {},
                 },

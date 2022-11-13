@@ -1,8 +1,7 @@
 @import "../scss/default/varivables.scss";
 
-.our-services-01 {
+.section-our-services-01 {
     padding-top: 80px;
-    padding-bottom: 500px;
     .our-services-wrapper {
         padding: 80px;
         border-top-left-radius: 100px;
@@ -45,15 +44,19 @@
             position: relative;
             &:before {
                 content: "";
-                background-color: transparent;
+                background-color: map-get(
+                    $map: $theme-colors,
+                    $key: "secondary"
+                );
                 border-radius: 10px;
                 height: 100%;
                 left: 0;
                 position: absolute;
-                top: 0;
-                transform: translateX(-2px);
-                transition: 0.3s all ease;
+                top: 50%;
+                transform: translate(-2.5px, -50%);
+                transition: 0.2s all ease-in-out;
                 width: 6px;
+                opacity: 0;
             }
             &:hover {
                 color: darken(
@@ -64,16 +67,20 @@
             &.active {
                 color: map-get($map: $theme-colors, $key: "secondary");
                 &:before {
-                    background-color: map-get(
-                        $map: $theme-colors,
-                        $key: "secondary"
-                    );
+                    opacity: 1;
                 }
             }
         }
         .tab-pane {
             padding: 0 40px 45px;
             position: relative;
+            opacity: 0;
+            display: none;
+            transition: opacity 0.3s ease;
+            > * {
+                position: relative;
+                z-index: 2;
+            }
             img {
                 border: 4px solid #ffffff;
                 border-radius: 10px;
@@ -111,9 +118,119 @@
                 opacity: 0.1;
                 position: absolute;
                 width: 100%;
-                z-index: -1;
                 background-color: #bbbbbb;
+                z-index: 1;
             }
+            &.active {
+                display: block;
+            }
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.section-global-company-01 {
+    background-color: map-get($map: $theme-colors, $key: "primary");
+    padding: 100px 0 240px;
+    position: relative;
+    z-index: 0;
+    .global-wrapper {
+        align-items: start;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 450px 1fr;
+    }
+    .list-site {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 40px;
+    }
+    .site__item {
+        width: fit-content;
+        color: #9abffb;
+        background: #9ec3ff1a;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 8px 16px;
+        font-weight: 700;
+        opacity: 0.5;
+        &:before {
+            content: "\f111";
+            font-family: map-get($map: $theme-fonts, $key: "icons");
+            font-size: 50%;
+            margin-bottom: 4px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+    }
+}
+
+.section-achievements-01 {
+    .achievements {
+        background: linear-gradient(270deg, #2f9edd, #427eeb);
+        border-radius: 30px;
+        box-shadow: 0 5px 40px 0 #00000033;
+        column-gap: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding: 52px 120px;
+        position: relative;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    .achievement__item {
+        color: #ffffff;
+        text-align: center;
+        .fas {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        .text {
+            h4 {
+                font-size: 2.5rem;
+                font-weight: 900;
+                line-height: 1;
+            }
+            p {
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+.section-clients-01 {
+    .client-logo {
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px 0 #0000001a;
+        display: inline-flex;
+        filter: grayscale(1);
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+        min-height: 150px;
+        padding: 0 20px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+    .clients-01-swiper--01 {
+        margin-top: 40px;
+    }
+    .clients-01-swiper--01,
+    .clients-01-swiper--02 {
+        .swiper-container {
+            padding: 16px 0;
+            margin: 0 -4vw;
         }
     }
 }

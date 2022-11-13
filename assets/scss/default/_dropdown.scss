@@ -53,9 +53,9 @@
     }
     &:not(.dropdown-item-selected) {
         &:hover {
-            background-color: lighten(
+            background-color: rgba(
                 $color: map-get($map: $theme-colors, $key: "primary"),
-                $amount: 4%
+                $alpha: 0.08
             );
         }
         &:active {

@@ -11,4 +11,13 @@
     p {
         font-size: 0.875rem;
     }
+    &.dark {
+        h2 {
+            font-size: 3.125rem;
+            color: #ffffff;
+        }
+        p {
+            color: rgba($color: #ffffff, $alpha: 0.5);
+        }
+    }
 }

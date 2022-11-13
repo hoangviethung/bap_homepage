@@ -77,9 +77,9 @@
 
 .nav-sub-items-wrapper {
     position: fixed;
-    top: 50%;
-    right: 0;
-    left: 0;
+    top: calc(112px / 2);
+    right: 60px;
+    left: 60px;
     z-index: -1;
     padding: 100px 68px 56px;
     pointer-events: none;
