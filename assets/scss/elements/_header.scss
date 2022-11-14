@@ -55,14 +55,13 @@
         > a {
             transition: 0.3s color ease-in-out;
             &:not(.btn) {
-                font-size: 1.125rem;
                 &:hover {
                     color: map-get($map: $theme-colors, $key: "secondary");
                 }
             }
         }
         a {
-            font-weight: 700;
+            font-weight: 600;
             &:not(.btn) {
                 color: inherit;
                 &.nav-sub-item-title {
@@ -165,7 +164,6 @@
     grid-gap: 32px;
     .sub__item {
         a {
-            font-size: 1.25rem;
             position: relative;
             display: block;
             padding: 16px 16px 16px;
@@ -265,9 +263,8 @@ $language-icon-size: 32px;
 }
 
 .language-name {
-    font-size: 1.125rem;
     margin-left: 8px;
-    font-weight: 700;
+    font-weight: 600;
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;

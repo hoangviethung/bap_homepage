@@ -19,3 +19,20 @@
         -webkit-line-clamp: 5;
     }
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: map-get($map: $theme-colors, $key: "secondary");
+}
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+    content: "\f178";
+}
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+    content: "\f177";
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-family: map-get($map: $theme-fonts, $key: "icons");
+}

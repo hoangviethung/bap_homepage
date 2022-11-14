@@ -22,25 +22,28 @@
     .swiper-container-horizontal > .swiper-pagination-bullets,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom: 48px;
-        display: flex;
+        bottom: 5%;
+        display: inline-flex;
         align-items: center;
-        left: 94px;
         right: 94px;
+        left: unset;
+        width: fit-content;
     }
     .swiper-container-horizontal {
         > .swiper-pagination-bullets {
             .swiper-pagination-bullet {
-                margin: 0 16px 0 0;
+                margin: 0;
                 opacity: 1;
+                + .swiper-pagination-bullet {
+                    margin: 0 0 0 16px;
+                }
             }
         }
     }
     .swiper-pagination-bullet {
-        width: 48px;
+        width: 16px;
         height: 16px;
         transition: 0.3s all cubic-bezier(0.74, -0.35, 0.81, 1.25);
-        border-radius: 8px;
         &:not(.swiper-pagination-bullet-active) {
             background: #ffffff;
         }

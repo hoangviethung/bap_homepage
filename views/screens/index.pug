@@ -17,7 +17,7 @@ block main
                     h2 Global SDaaS /
                         br 
                         | Blockchain & IT Consulting
-                    p Our dedicated and highly professional team strives to provide our global clients with
+                    p.sm Our dedicated and highly professional team strives to provide our global clients with
                         br
                         | full-stack solutions by multiple platforms, languages in a timely manner.
                 .our-services
@@ -62,28 +62,28 @@ block main
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
                         #website_app.tab-pane(role='tabpanel')
-                            img(src="../assets/images/services/blockchain.png", alt="SERVICE-BLOCKCHAIN")
+                            img(src="../assets/images/services/website-app.png", alt="SERVICE-WEBSITE-SMARTPHONE-APP")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
                             .call-to-actions
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
                         #business_application.tab-pane(role='tabpanel')
-                            img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
+                            img(src="../assets/images/services/business-application.png", alt="BUSINESS-APPLICATION")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
                             .call-to-actions
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
                         #sap_erp.tab-pane(role='tabpanel')
-                            img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
+                            img(src="../assets/images/services/sap-erp.png", alt="SERVICE-SAP-ERP")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
                             .call-to-actions
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
                         #game.tab-pane(role='tabpanel')
-                            img(src="../assets/images/services/ai-iot.png", alt="SERVICE-AI-IOT")
+                            img(src="../assets/images/services/game.png", alt="SERVICE-GAME")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis accusamus natus ea deserunt ducimus architecto.
                             .call-to-actions
                                 a.btn(href="#")
@@ -95,7 +95,7 @@ block main
                 .text-column
                     .title-default.dark
                         h2 Global Presence
-                        p Our global offices provide seamless services worldwide.
+                        p.sm Our global offices provide seamless services worldwide.
                             br
                             | We code while you sleep!
                     ul.list-site
@@ -185,7 +185,80 @@ block main
                                     .speaker__position Co.,Ltd Matsumoto Hidemori CEO
                         .swiper-button-next
                         .swiper-button-prev
-    section.section-home-news
+    section.section-awards
+        .container
+            .headding
+                h2 Top 10 Vietnam ICT Companies 2020
+                h2 Company Awarded by the VINASA
+            .award-images-and-actions
+                img(src="../assets/images/certification.png", alt="certification")
+                a(href="#").btn.btn-lg.btn-secondary
+                    span Read More
+                    i.fas.fa-long-arrow-alt-right
+            img.award-cup(src="../assets/images/section-awards-cup.png", alt="awards-cup")
+    section.section-featured-projects
         .container
             .title-default.ta-c
-                h2 Blog & News
+                h2 Featured Projects
+            .featured-projects-actions
+                a(href="#").btn.btn-sm.btn-outline-secondary
+                    span Read More
+                    i.fas.fa-long-arrow-alt-right
+            .featured-projects-swiper
+                .swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            a(href="#").projects__item
+                                .item__image
+                                    img(src="../assets/images/featured-projects/logistic-management.jpg", alt="logistic-management")
+                                .item__desc
+                                    .meta
+                                        .category Blockchain
+                                        .date Thursday / 10.11.2022
+                                    h3 Logistic Management
+                        .swiper-slide
+                            a(href="#").projects__item
+                                .item__image
+                                    img(src="../assets/images/featured-projects/smart-eLearning.jpg", alt="smart-eLearning")
+                                .item__desc
+                                    .meta
+                                        .category Blockchain
+                                        .date Thursday / 10.11.2022
+                                    h3  Smart E-learning
+                        .swiper-slide
+                            a(href="#").projects__item
+                                .item__image
+                                    img(src="../assets/images/featured-projects/crypto-war.jpg", alt="crypto-war")
+                                .item__desc
+                                    .meta
+                                        .category Blockchain
+                                        .date Thursday / 10.11.2022
+                                    h3  Crypto war(Game)
+                        .swiper-slide
+                            a(href="#").projects__item
+                                .item__image
+                                    img(src="../assets/images/featured-projects/live-dreamer.jpg", alt="live-dreamer")
+                                .item__desc
+                                    .meta
+                                        .category Blockchain
+                                        .date Thursday / 10.11.2022
+                                    h3 Live Dreamer
+                .swiper-button-next
+                .swiper-button-prev
+    section.section-startup-products
+        .title-startup-products BAP's technology startup products
+        .startup-products-swiper
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        a(href="#" target="_blank").product-logo
+                            img(src="../assets/images/startup-projects/danang-services.jpg", alt="danang-services")
+                    .swiper-slide
+                        a(href="#" target="_blank").product-logo
+                            img(src="../assets/images/startup-projects/dayconkieunhat.jpg", alt="dayconkieunhat")
+                    .swiper-slide
+                        a(href="#" target="_blank").product-logo
+                            img(src="../assets/images/startup-projects/greenbeli.jpg", alt="greenbeli")
+                    .swiper-slide
+                        a(href="#" target="_blank").product-logo
+                            img(src="../assets/images/startup-projects/lyberzy.jpg", alt="lyberzy")

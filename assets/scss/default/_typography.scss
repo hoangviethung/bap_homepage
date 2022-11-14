@@ -3,13 +3,17 @@
         font-size: 0.875rem;
         font-weight: 700;
         color: map-get($map: $theme-colors, $key: "secondary");
+        margin-bottom: 8px;
     }
     h2 {
         font-size: 3.125rem;
         color: map-get($map: $theme-colors, $key: "primary");
     }
     p {
-        font-size: 0.875rem;
+        margin-top: 8px;
+        &.sm {
+            font-size: 0.875rem;
+        }
     }
     &.dark {
         h2 {
