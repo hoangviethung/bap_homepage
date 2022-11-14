@@ -17670,27 +17670,27 @@ progress {
   box-shadow: 0 0 0 0.25rem rgba(218, 11, 11, 0.2);
 }
 
-.title-default-01 h3 {
+.title-default h3 {
   font-size: 0.875rem;
   font-weight: 700;
   color: #0057e2;
 }
 
-.title-default-01 h2 {
+.title-default h2 {
   font-size: 3.125rem;
   color: #062350;
 }
 
-.title-default-01 p {
+.title-default p {
   font-size: 0.875rem;
 }
 
-.title-default-01.dark h2 {
+.title-default.dark h2 {
   font-size: 3.125rem;
   color: #ffffff;
 }
 
-.title-default-01.dark p {
+.title-default.dark p {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -18310,32 +18310,32 @@ progress {
   user-select: none;
 }
 
-.hero-banner-01-swiper {
+.hero-banner-swiper {
   height: 100vh;
   width: 100%;
   overflow: hidden;
   background-color: #000000;
 }
 
-.hero-banner-01-swiper .swiper-container {
+.hero-banner-swiper .swiper-container {
   height: 100%;
 }
 
-.hero-banner-01-swiper .swiper-container.swiper-container-initialized .swiper-slide:not(.swiper-slide-active) {
+.hero-banner-swiper .swiper-container.swiper-container-initialized .swiper-slide:not(.swiper-slide-active) {
   transform: scale(0.5);
 }
 
-.hero-banner-01-swiper .swiper-container.swiper-container-initialized .swiper-slide:not(.swiper-slide-active) .banner-image {
+.hero-banner-swiper .swiper-container.swiper-container-initialized .swiper-slide:not(.swiper-slide-active) .banner-image {
   border-radius: 32px;
 }
 
-.hero-banner-01-swiper .swiper-slide {
+.hero-banner-swiper .swiper-slide {
   transition: transform 1.1s 0.6s cubic-bezier(0.4, 0, 0.22, 1);
 }
 
-.hero-banner-01-swiper .swiper-container-horizontal > .swiper-pagination-bullets,
-.hero-banner-01-swiper .swiper-pagination-custom,
-.hero-banner-01-swiper .swiper-pagination-fraction {
+.hero-banner-swiper .swiper-container-horizontal > .swiper-pagination-bullets,
+.hero-banner-swiper .swiper-pagination-custom,
+.hero-banner-swiper .swiper-pagination-fraction {
   bottom: 48px;
   display: flex;
   align-items: center;
@@ -18343,27 +18343,27 @@ progress {
   right: 94px;
 }
 
-.hero-banner-01-swiper .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+.hero-banner-swiper .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 16px 0 0;
   opacity: 1;
 }
 
-.hero-banner-01-swiper .swiper-pagination-bullet {
+.hero-banner-swiper .swiper-pagination-bullet {
   width: 48px;
   height: 16px;
   transition: 0.3s all cubic-bezier(0.74, -0.35, 0.81, 1.25);
   border-radius: 8px;
 }
 
-.hero-banner-01-swiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+.hero-banner-swiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
   background: #ffffff;
 }
 
-.hero-banner-01-swiper .swiper-pagination-bullet-active {
+.hero-banner-swiper .swiper-pagination-bullet-active {
   background-color: #0057e2;
 }
 
-.hero-banner-01-swiper .banner-image {
+.hero-banner-swiper .banner-image {
   position: relative;
   border-radius: 0;
   overflow: hidden;
@@ -18372,14 +18372,14 @@ progress {
   height: 100%;
 }
 
-.hero-banner-01-swiper .banner-image img {
+.hero-banner-swiper .banner-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center center;
 }
 
-.hero-banner-01-swiper .banner-image:after {
+.hero-banner-swiper .banner-image:after {
   content: "";
   display: block;
   position: absolute;
@@ -18393,7 +18393,7 @@ progress {
   background: linear-gradient(transparent, black);
 }
 
-.hero-banner-01-swiper .banner-content {
+.hero-banner-swiper .banner-content {
   position: absolute;
   right: 94px;
   bottom: 10%;
@@ -18401,17 +18401,17 @@ progress {
   color: #ffffff;
 }
 
-.hero-banner-01-swiper .banner-title,
-.hero-banner-01-swiper .banner-category {
+.hero-banner-swiper .banner-title,
+.hero-banner-swiper .banner-category {
   font-family: "Signika";
 }
 
-.hero-banner-01-swiper .banner-title {
+.hero-banner-swiper .banner-title {
   font-size: 3rem;
   font-weight: 700;
 }
 
-.hero-banner-01-swiper .banner-category {
+.hero-banner-swiper .banner-category {
   font-size: 2rem;
   margin-top: 8px;
 }

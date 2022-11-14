@@ -9,10 +9,10 @@ block js
     script(src="./assets/js/home.js")
 block main
     include ../components/hero-banner-01
-    section.section-our-services-01
+    section.section-our-services
         .container
             .our-services-wrapper
-                .title-default-01
+                .title-default
                     h3 OUR SERVICES
                     h2 Global SDaaS /
                         br 
@@ -89,11 +89,11 @@ block main
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
-    section.section-global-company-01
+    section.section-global-company
         .container
             .global-wrapper
                 .text-column
-                    .title-default-01.dark
+                    .title-default.dark
                         h2 Global Presence
                         p Our global offices provide seamless services worldwide.
                             br
@@ -104,7 +104,7 @@ block main
                 .image-column
                     .image-map
                         img(src="../assets/images/global-company-image-map.png", alt="GLOBAL-COMPANY")
-    section.section-achievements-01
+    section.section-achievements
         .container
             .achievements
                 .achievement__item
@@ -132,11 +132,11 @@ block main
                     .text
                         h4 220
                         p Projects
-    section.section-clients-01
-        .title-default-01.ta-c
+    section.section-clients
+        .title-default.ta-c
             h2 Our Clients
             p Regardless of the size and type of business of the company, there are examples of companies that using BAP developing teams.
-        .clients-01-swiper--01
+        .clients-swiper--01
             .swiper-container
                 .swiper-wrapper
                     -for(i=0;i<20;i++)
@@ -146,7 +146,7 @@ block main
                         .swiper-slide
                             .client-logo
                                 img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
-        .clients-01-swiper--02
+        .clients-swiper--02
             .swiper-container
                 .swiper-wrapper
                     -for(j=0;j<20;j++)
@@ -156,3 +156,36 @@ block main
                         .swiper-slide
                             .client-logo
                                 img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
+    section.section-testimonials
+        .container
+            .testimonials-wrapper
+                .testimonials-swiper
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
+                                .quote-speaker
+                                    .speaker__avatar
+                                        img(src="../assets/images/testimonials/mediotec.jpg", alt="mediotec")
+                                    .speaker__name  Mediotec
+                                    .speaker__position Co.,Ltd Matsumoto Hidemori CEO
+                            .swiper-slide
+                                p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
+                                .quote-speaker
+                                    .speaker__avatar
+                                        img(src="../assets/images/testimonials/ogawa.jpeg", alt="ogawa")
+                                    .speaker__name  Mr.Ogawa
+                                    .speaker__position Assistant Manager, NTT DATA NJK Corporation
+                            .swiper-slide
+                                p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
+                                .quote-speaker
+                                    .speaker__avatar
+                                        img(src="../assets/images/testimonials/mediotec.jpg", alt="mediotec")
+                                    .speaker__name  Mediotec
+                                    .speaker__position Co.,Ltd Matsumoto Hidemori CEO
+                        .swiper-button-next
+                        .swiper-button-prev
+    section.section-home-news
+        .container
+            .title-default.ta-c
+                h2 Blog & News

@@ -12,12 +12,13 @@
                 (this._html = $("html"));
         },
         methods: function (e) {
-            imJs.initSliderHeroBanner01();
-            imJs.initSliderClients01();
+            imJs.initSliderHeroBanner();
+            imJs.initSliderClients();
+            imJs.initSliderTestimonials();
         },
-        initSliderHeroBanner01() {
-            const swiperHeroBanner01 = new Swiper(
-                ".hero-banner-01-swiper .swiper-container",
+        initSliderHeroBanner() {
+            const swiperHeroBanner = new Swiper(
+                ".hero-banner-swiper .swiper-container",
                 {
                     slidesPerView: 1,
                     speed: 1000,
@@ -26,16 +27,16 @@
                         delay: 5000,
                     },
                     pagination: {
-                        el: ".hero-banner-01-swiper .swiper-pagination",
+                        el: ".hero-banner-swiper .swiper-pagination",
                         clickable: true,
                     },
                     on: {},
                 },
             );
         },
-        initSliderClients01() {
+        initSliderClients() {
             const swiperHeroBanner01 = new Swiper(
-                ".clients-01-swiper--01 .swiper-container",
+                ".clients-swiper--01 .swiper-container",
                 {
                     slidesPerView: 10,
                     spaceBetween: 32,
@@ -48,7 +49,7 @@
                 },
             );
             const swiperHeroBanner02 = new Swiper(
-                ".clients-01-swiper--02 .swiper-container",
+                ".clients-swiper--02 .swiper-container",
                 {
                     slidesPerView: 10,
                     spaceBetween: 32,
@@ -56,6 +57,23 @@
                     speed: 3000,
                     autoplay: {
                         delay: 1500,
+                    },
+                    on: {},
+                },
+            );
+        },
+        initSliderTestimonials() {
+            const swiperTestimonials = new Swiper(
+                ".testimonials-swiper .swiper-container",
+                {
+                    slidesPerView: 1,
+                    simulateTouch: false,
+                    autoplay: {
+                        delay: 5000,
+                    },
+                    navigation: {
+                        nextEl: ".testimonials-swiper .swiper-button-next",
+                        prevEl: ".testimonials-swiper .swiper-button-prev",
                     },
                     on: {},
                 },
