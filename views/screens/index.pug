@@ -89,6 +89,47 @@ block main
                                 a.btn(href="#")
                                     span Read More
                                     i.fas.fa-long-arrow-alt-right
+    section.section-featured-projects
+        .container
+            .title-default.ta-c
+                h2 Featured Projects
+            .featured-projects-swiper
+                .swiper-container
+                    .swiper-wrapper
+                        -for(i=1;i<5;i++)
+                            .swiper-slide
+                                a(href="#").projects__item
+                                    .item__image
+                                        img(src=`../assets/images/featured-projects/crypto-war-${i}.jpg`, alt="crypto-war")
+                                    .item__desc
+                                        .meta
+                                            .category Blockchain
+                                            .date Thursday / 10.11.2022
+                                        h3  Crypto war(Game)
+                .swiper-button-next
+                .swiper-button-prev
+            .featured-projects-actions
+                a(href="#").btn.btn-lg.btn-secondary
+                    span Read More
+                    i.fas.fa-long-arrow-alt-right
+    section.section-startup-products
+        .title-startup-products BAP's technology startup products
+        .startup-products-swiper
+            .swiper-container
+                .swiper-wrapper
+                    -for(i=1;i<5;i++)
+                        .swiper-slide
+                            a(href="#" target="_blank").product-logo
+                                img(src="../assets/images/startup-projects/danang-services.jpg", alt="danang-services")
+                        .swiper-slide
+                            a(href="#" target="_blank").product-logo
+                                img(src="../assets/images/startup-projects/dayconkieunhat.jpg", alt="dayconkieunhat")
+                        .swiper-slide
+                            a(href="#" target="_blank").product-logo
+                                img(src="../assets/images/startup-projects/greenbeli.jpg", alt="greenbeli")
+                        .swiper-slide
+                            a(href="#" target="_blank").product-logo
+                                img(src="../assets/images/startup-projects/lyberzy.jpg", alt="lyberzy")
     section.section-global-company
         .container
             .global-wrapper
@@ -98,12 +139,50 @@ block main
                         p.sm Our global offices provide seamless services worldwide.
                             br
                             | We code while you sleep!
-                    ul.list-site
-                        li.site__item Vietnam - Head Office
-                        li.site__item Japan - Osaka & Tokyo Office
+                    ul.countries
+                        li.country__item(target="global_vi") Vietnam - Head Office
+                        li.country__item(target="global_jp") Japan - Osaka & Tokyo Office
                 .image-column
                     .image-map
                         img(src="../assets/images/global-company-image-map.png", alt="GLOBAL-COMPANY")
+                    .locations#global_vi
+                        .locations-wrapper
+                            img(src="../assets/images/global-company-image-vi.png", alt="GLOBAL-COMPANY")
+                            .information__locations
+                                .location__item
+                                    .heading
+                                        span 01
+                                        h4 Hà Nội
+                                    p 9F, Hòa bình Complex Building, 106 Hoàn Quốc Việt, Cầu Giấy, Hà Nội
+                                .location__item
+                                    .heading
+                                        span 02
+                                        h4 Hồ Chí Minh
+                                    p 9F, Hòa bình Complex Building, 106 Hoàn Quốc Việt, Cầu Giấy, Hà Nội
+                                .location__item
+                                    .heading
+                                        span 03
+                                        h4 Đà Nẵng
+                                    p 9F, Hòa bình Complex Building, 106 Hoàn Quốc Việt, Cầu Giấy, Hà Nội
+                                .location__item
+                                    .heading
+                                        span 04
+                                        h4 Huế
+                                    p 9F, Hòa bình Complex Building, 106 Hoàn Quốc Việt, Cầu Giấy, Hà Nội
+                    .locations#global_jp
+                        .locations-wrapper
+                            img(src="../assets/images/global-company-image-jp.png", alt="GLOBAL-COMPANY")
+                            .information__locations
+                                .location__item
+                                    .heading
+                                        span 01
+                                        h4 Tokyo
+                                    p 103-0025 Lầu 5 tòa nhà Okamoto, 1-11-3 Nihonbashi, Kayabacho, Chuo-ku, Tokyo
+                                .location__item
+                                    .heading
+                                        span 02
+                                        h4 OSAKA
+                                    p Lầu 8 tòa nhà Toshiba Osaka, 4-2-12 Honmachi, Chuo-ku, Osaka
     section.section-achievements
         .container
             .achievements
@@ -196,69 +275,3 @@ block main
                     span Read More
                     i.fas.fa-long-arrow-alt-right
             img.award-cup(src="../assets/images/section-awards-cup.png", alt="awards-cup")
-    section.section-featured-projects
-        .container
-            .title-default.ta-c
-                h2 Featured Projects
-            .featured-projects-actions
-                a(href="#").btn.btn-sm.btn-outline-secondary
-                    span Read More
-                    i.fas.fa-long-arrow-alt-right
-            .featured-projects-swiper
-                .swiper-container
-                    .swiper-wrapper
-                        .swiper-slide
-                            a(href="#").projects__item
-                                .item__image
-                                    img(src="../assets/images/featured-projects/logistic-management.jpg", alt="logistic-management")
-                                .item__desc
-                                    .meta
-                                        .category Blockchain
-                                        .date Thursday / 10.11.2022
-                                    h3 Logistic Management
-                        .swiper-slide
-                            a(href="#").projects__item
-                                .item__image
-                                    img(src="../assets/images/featured-projects/smart-eLearning.jpg", alt="smart-eLearning")
-                                .item__desc
-                                    .meta
-                                        .category Blockchain
-                                        .date Thursday / 10.11.2022
-                                    h3  Smart E-learning
-                        .swiper-slide
-                            a(href="#").projects__item
-                                .item__image
-                                    img(src="../assets/images/featured-projects/crypto-war.jpg", alt="crypto-war")
-                                .item__desc
-                                    .meta
-                                        .category Blockchain
-                                        .date Thursday / 10.11.2022
-                                    h3  Crypto war(Game)
-                        .swiper-slide
-                            a(href="#").projects__item
-                                .item__image
-                                    img(src="../assets/images/featured-projects/live-dreamer.jpg", alt="live-dreamer")
-                                .item__desc
-                                    .meta
-                                        .category Blockchain
-                                        .date Thursday / 10.11.2022
-                                    h3 Live Dreamer
-                .swiper-button-next
-                .swiper-button-prev
-    section.section-startup-products
-        .title-startup-products BAP's technology startup products
-        .startup-products-swiper
-            .swiper-container
-                .swiper-wrapper
-                    .swiper-slide
-                        a(href="#" target="_blank").product-logo
-                            img(src="../assets/images/startup-projects/danang-services.jpg", alt="danang-services")
-                    .swiper-slide
-                        a(href="#" target="_blank").product-logo
-                            img(src="../assets/images/startup-projects/dayconkieunhat.jpg", alt="dayconkieunhat")
-                    .swiper-slide
-                        a(href="#" target="_blank").product-logo
-                            img(src="../assets/images/startup-projects/greenbeli.jpg", alt="greenbeli")
-                    .swiper-slide
-                        a(href="#" target="_blank").product-logo
-                            img(src="../assets/images/startup-projects/lyberzy.jpg", alt="lyberzy")

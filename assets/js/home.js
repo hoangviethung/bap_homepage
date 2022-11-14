@@ -17,6 +17,7 @@
             imJs.initSliderTestimonials();
             imJs.initSliderFeaturedProjects();
             imJs.initSliderStartupProducts();
+            imJs.hoverOffices();
         },
         initSliderHeroBanner() {
             const swiperHeroBanner = new Swiper(
@@ -138,15 +139,52 @@
             const swiperStartupProducts = new Swiper(
                 ".startup-products-swiper .swiper-container",
                 {
-                    slidesPerView: 8,
-                    spaceBetween: 32,
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                    loop: true,
                     freeMode: true,
                     speed: 3000,
-                    loop: true,
                     autoplay: {
                         delay: 1500,
                     },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 4,
+                            spaceBetween: 24,
+                        },
+                        1024: {
+                            slidesPerView: 6,
+                        },
+                        1200: {
+                            slidesPerView: 8,
+                        },
+                        1600: {
+                            slidesPerView: 10,
+                            spaceBetween: 32,
+                        },
+                    },
                     on: {},
+                },
+            );
+        },
+        hoverOffices() {
+            $(".section-global-company .country__item").hover(
+                function () {
+                    // over
+
+                    const targetId = $(this).attr("target");
+                    $(".section-global-company .locations").each(function (
+                        index,
+                        location,
+                    ) {
+                        if ($(location).attr("id") == targetId) {
+                            $(location).addClass("show");
+                        }
+                    });
+                },
+                function () {
+                    // out
+                    $(".section-global-company .locations").removeClass("show");
                 },
             );
         },
