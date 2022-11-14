@@ -9,6 +9,7 @@ body {
     font-family: map-get($map: $theme-fonts, $key: "body");
     font-size: 1rem;
     font-weight: 400;
+    line-height: 1.4;
     color: map-get($map: $theme-colors, $key: "txt-body");
     background-color: map-get($map: $theme-colors, $key: "background-1");
     overflow-x: hidden;
