@@ -9,7 +9,7 @@
   --color-info: #1470eb;
   --color-warning: #f9b506;
   --color-error: #da0b0b;
-  --font-body: Inter;
+  --font-body: Varta;
   --font-title: Signika;
   --font-icons: Font Awesome 5 Pro;
 }
@@ -1130,26 +1130,6 @@
   -webkit-line-clamp: 5;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #0057e2;
-}
-
-.swiper-button-next:after,
-.swiper-container-rtl .swiper-button-prev:after {
-  content: "\f178";
-}
-
-.swiper-button-prev:after,
-.swiper-container-rtl .swiper-button-next:after {
-  content: "\f177";
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-family: "Font Awesome 5 Pro";
-}
-
 *,
 *::before,
 *::after {
@@ -1158,10 +1138,9 @@
 
 body {
   margin: 0;
-  font-family: "Inter";
+  font-family: "Varta";
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.4;
   color: #202121;
   background-color: #ffffff;
   overflow-x: hidden;
@@ -1471,73 +1450,41 @@ progress {
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter-ExtraBold.woff") format("woff");
+  font-family: "Varta";
+  src: url("../fonts/Varta-Bold.woff2") format("woff2"), url("../fonts/Varta-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Black.woff2") format("woff2"), url("../fonts/Inter-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-ExtraLight.woff2") format("woff2"), url("../fonts/Inter-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-family: "Varta";
+  src: url("../fonts/Varta-SemiBold.woff2") format("woff2"), url("../fonts/Varta-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Thin.woff2") format("woff2"), url("../fonts/Inter-Thin.woff") format("woff");
-  font-weight: 100;
+  font-family: "Varta";
+  src: url("../fonts/Varta-Light.woff2") format("woff2"), url("../fonts/Varta-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Varta";
+  src: url("../fonts/Varta-Regular.woff2") format("woff2"), url("../fonts/Varta-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Varta";
+  src: url("../fonts/Varta-Medium.woff2") format("woff2"), url("../fonts/Varta-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -17514,7 +17461,7 @@ progress {
   white-space: nowrap;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1;
   min-height: 48px;
@@ -17527,14 +17474,14 @@ progress {
 }
 
 .btn-sm {
-  padding: 0.375rem 0.75rem 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
   min-height: 32px;
 }
 
 .btn-lg {
-  font-size: 1rem;
-  padding: 1rem 2rem 1rem;
-  border-radius: 2.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
   min-height: 56px;
 }
 
@@ -17561,7 +17508,6 @@ progress {
 .btn-outline-primary {
   color: #062350;
   border-color: #062350;
-  font-weight: 500;
 }
 
 .btn-outline-primary:hover, .btn-outline-primary:active {
@@ -17592,7 +17538,6 @@ progress {
 .btn-outline-secondary {
   color: #0057e2;
   border-color: #0057e2;
-  font-weight: 500;
 }
 
 .btn-outline-secondary:hover, .btn-outline-secondary:active {
@@ -17729,7 +17674,6 @@ progress {
   font-size: 0.875rem;
   font-weight: 700;
   color: #0057e2;
-  margin-bottom: 8px;
 }
 
 .title-default h2 {
@@ -17738,10 +17682,6 @@ progress {
 }
 
 .title-default p {
-  margin-top: 8px;
-}
-
-.title-default p.sm {
   font-size: 0.875rem;
 }
 
@@ -18140,12 +18080,16 @@ progress {
   transition: 0.3s color ease-in-out;
 }
 
+.header-nav__items .nav__item > a:not(.btn) {
+  font-size: 1.125rem;
+}
+
 .header-nav__items .nav__item > a:not(.btn):hover {
   color: #0057e2;
 }
 
 .header-nav__items .nav__item a {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .header-nav__items .nav__item a:not(.btn) {
@@ -18254,6 +18198,7 @@ progress {
 }
 
 .nav-sub-items .sub__item a {
+  font-size: 1.25rem;
   position: relative;
   display: block;
   padding: 16px 16px 16px;
@@ -18356,147 +18301,13 @@ progress {
 }
 
 .language-name {
+  font-size: 1.125rem;
   margin-left: 8px;
-  font-weight: 600;
+  font-weight: 700;
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
   user-select: none;
-}
-
-.footer-default {
-  background-color: #020e21;
-  padding: 72px 0 32px;
-}
-
-.footer-default .footer-layout {
-  display: grid;
-  grid-template-columns: 360px auto;
-  gap: 24px;
-}
-
-.footer-default .footer-logo {
-  width: 150px;
-}
-
-.footer-default .footer-logo img {
-  filter: brightness(100);
-}
-
-.footer-default .footer-nav,
-.footer-default .footer-socials {
-  display: flex;
-  gap: 16px;
-  margin-top: 24px;
-}
-
-.footer-default .footer-nav .nav__link,
-.footer-default .footer-socials .nav__link {
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 600;
-  transition: 0.3s all ease-in-out;
-}
-
-.footer-default .footer-nav .nav__link:hover,
-.footer-default .footer-socials .nav__link:hover {
-  color: #fcb415;
-}
-
-.footer-default .footer-nav .social__link,
-.footer-default .footer-socials .social__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #ffffff;
-  color: #020e21;
-  border-radius: 50%;
-  transition: 0.3s all ease-in-out;
-}
-
-.footer-default .footer-nav .social__link:hover,
-.footer-default .footer-socials .social__link:hover {
-  color: #ffffff;
-  background-color: #0057e2;
-}
-
-.footer-default .copyright {
-  color: #ffffff;
-  margin-top: 32px;
-  font-family: "Signika";
-  padding-top: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.footer-default .footer-location-headding {
-  display: flex;
-  align-items: center;
-  font-size: 1.125rem;
-  color: #ffffff;
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-
-.footer-default .footer-location-headding .country {
-  overflow: hidden;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
-.footer-default .footer-location-headding .country img {
-  width: 100%;
-  height: 100%;
-  object-position: center center;
-  object-fit: cover;
-}
-
-.footer-default .footer-location-headding:not(:first-of-type) {
-  margin-top: 32px;
-}
-
-.footer-default .footer-locations {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 24px;
-  row-gap: 32px;
-}
-
-.footer-default .footer-locations .location__item {
-  color: #ffffff;
-}
-
-.footer-default .footer-locations .location__item li {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 24px;
-}
-
-.footer-default .footer-locations .location__item li:before {
-  font-family: "Font Awesome 5 Pro";
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.footer-default .footer-locations .location__item li:first-child:before {
-  content: "\f1ad";
-}
-
-.footer-default .footer-locations .location__item li:nth-child(2):before {
-  content: "\f3c5";
-}
-
-.footer-default .footer-locations .location__item li:last-child:before {
-  content: "\f095";
-}
-
-.footer-default .footer-locations .location__item li + li {
-  margin-top: 16px;
 }
 
 .hero-banner-swiper {
@@ -18525,47 +18336,31 @@ progress {
 .hero-banner-swiper .swiper-container-horizontal > .swiper-pagination-bullets,
 .hero-banner-swiper .swiper-pagination-custom,
 .hero-banner-swiper .swiper-pagination-fraction {
-  bottom: 5%;
+  bottom: 48px;
+  display: flex;
+  align-items: center;
+  left: 94px;
+  right: 94px;
 }
 
 .hero-banner-swiper .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0;
+  margin: 0 16px 0 0;
   opacity: 1;
 }
 
-.hero-banner-swiper .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet + .swiper-pagination-bullet {
-  margin: 0 0 0 16px;
-}
-
 .hero-banner-swiper .swiper-pagination-bullet {
-  position: relative;
-  width: 16px;
+  width: 48px;
   height: 16px;
   transition: 0.3s all cubic-bezier(0.74, -0.35, 0.81, 1.25);
-  border-width: 1px;
-  border-color: #ffffff;
-  border-style: solid;
-  background: transparent;
-}
-
-.hero-banner-swiper .swiper-pagination-bullet:after {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background-color: #ffffff;
+  border-radius: 8px;
 }
 
 .hero-banner-swiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-  background: transparent;
+  background: #ffffff;
 }
 
-.hero-banner-swiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):after {
-  background-color: transparent;
+.hero-banner-swiper .swiper-pagination-bullet-active {
+  background-color: #0057e2;
 }
 
 .hero-banner-swiper .banner-image {
