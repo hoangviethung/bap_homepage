@@ -275,7 +275,19 @@
 }
 
 .section-achievements {
-  padding-top: 80px;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  margin-top: 56px;
+}
+
+.section-achievements .achievements-title {
+  margin-bottom: 16px;
+  text-align: center;
+  color: #0057e2;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .section-achievements .achievements {
@@ -287,10 +299,7 @@
 }
 
 .section-achievements .achievement__item {
-  text-align: center;
-  padding: 32px 16px;
-  box-shadow: 0px 0px 22.5px 2.5px rgba(0, 0, 0, 0.1);
-  border-radius: 24px;
+  color: #ffffff;
 }
 
 .section-achievements .achievement__item .fas {
@@ -300,13 +309,17 @@
 
 .section-achievements .achievement__item .text h4 {
   font-size: 2.5rem;
-  font-weight: 900;
   line-height: 1;
+  margin-bottom: 16px;
 }
 
 .section-achievements .achievement__item .text p {
-  font-weight: 600;
+  font-size: 20px;
   margin-top: 4px;
+}
+
+.section-clients {
+  overflow: hidden;
 }
 
 .section-clients .client-logo {
@@ -351,18 +364,13 @@
 
 .section-clients .clients-swiper--01,
 .section-clients .clients-swiper--02 {
-  overflow: hidden;
-}
-
-.section-clients .clients-swiper--01 .swiper-container,
-.section-clients .clients-swiper--02 .swiper-container {
   padding: 16px 0;
   margin: 0 -4vw;
 }
 
 @media (max-width: 575.98px) {
-  .section-clients .clients-swiper--01 .swiper-container,
-  .section-clients .clients-swiper--02 .swiper-container {
+  .section-clients .clients-swiper--01,
+  .section-clients .clients-swiper--02 {
     padding: 8px 0;
   }
 }
@@ -583,10 +591,12 @@
 .section-startup-products {
   padding-top: 72px;
   padding-bottom: 32px;
+  overflow: hidden;
 }
 
 .section-startup-products .startup-products-swiper {
-  overflow: hidden;
+  padding: 16px 0;
+  margin: 0 -4vw;
 }
 
 .section-startup-products .title-startup-products {
@@ -619,11 +629,6 @@
 .section-startup-products .product-logo img {
   width: 100%;
   height: auto;
-}
-
-.section-startup-products .swiper-container {
-  padding: 16px 0;
-  margin: 0 -4vw;
 }
 
 /*# sourceMappingURL=home.css.map */

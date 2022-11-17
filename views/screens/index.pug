@@ -9,34 +9,6 @@ block js
     script(src="./assets/js/home.js")
 block main
     include ../components/hero-banner-01
-    section.section-achievements
-        .container
-            .achievements
-                .achievement__item
-                    i.fas.fa-globe-asia
-                    .text
-                        h4 2
-                        p Countries
-                .achievement__item
-                    i.fas.fa-city
-                    .text
-                        h4 6
-                        p Cities
-                .achievement__item
-                    i.fas.fa-users
-                    .text
-                        h4 420
-                        p Employees
-                .achievement__item
-                    i.fas.fa-handshake-alt
-                    .text
-                        h4 100
-                        p Clients
-                .achievement__item
-                    i.fas.fa-project-diagram
-                    .text
-                        h4 220
-                        p Projects
     section.section-our-services
         .container
             .our-services-wrapper
@@ -122,7 +94,7 @@ block main
             .title-default.ta-c
                 h2 Featured Projects
             .featured-projects-swiper
-                .swiper-container
+                .swiper
                     .swiper-wrapper
                         -for(i=1;i<5;i++)
                             .swiper-slide
@@ -142,22 +114,21 @@ block main
                     i.fas.fa-long-arrow-alt-right
     section.section-startup-products
         .title-startup-products BAP's technology startup products
-        .startup-products-swiper
-            .swiper-container
-                .swiper-wrapper
-                    -for(i=1;i<5;i++)
-                        .swiper-slide
-                            a(href="#" target="_blank").product-logo
-                                img(src="../assets/images/startup-projects/danang-services.jpg", alt="danang-services")
-                        .swiper-slide
-                            a(href="#" target="_blank").product-logo
-                                img(src="../assets/images/startup-projects/dayconkieunhat.jpg", alt="dayconkieunhat")
-                        .swiper-slide
-                            a(href="#" target="_blank").product-logo
-                                img(src="../assets/images/startup-projects/greenbeli.jpg", alt="greenbeli")
-                        .swiper-slide
-                            a(href="#" target="_blank").product-logo
-                                img(src="../assets/images/startup-projects/lyberzy.jpg", alt="lyberzy")
+        .startup-products-swiper.swiper
+            .swiper-wrapper
+                -for(i=1;i<5;i++)
+                    .swiper-slide
+                        a(href="#" target="_blank").product-logo
+                            img(src="../assets/images/startup-projects/danang-services.jpg", alt="danang-services")
+                    .swiper-slide
+                        a(href="#" target="_blank").product-logo
+                            img(src="../assets/images/startup-projects/dayconkieunhat.jpg", alt="dayconkieunhat")
+                    .swiper-slide
+                        a(href="#" target="_blank").product-logo
+                            img(src="../assets/images/startup-projects/greenbeli.jpg", alt="greenbeli")
+                    .swiper-slide
+                        a(href="#" target="_blank").product-logo
+                            img(src="../assets/images/startup-projects/lyberzy.jpg", alt="lyberzy")
     section.section-global-company
         .container
             .global-wrapper
@@ -215,55 +186,52 @@ block main
         .title-default.ta-c
             h2 Our Clients
             p Regardless of the size and type of business of the company, there are examples of companies that using BAP developing teams.
-        .clients-swiper--01
-            .swiper-container
-                .swiper-wrapper
-                    -for(i=0;i<20;i++)
-                        .swiper-slide
-                            .client-logo
-                                img(src="../assets/images/clients/rakuten.png", alt="rakuten")
-                        .swiper-slide
-                            .client-logo
-                                img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
-        .clients-swiper--02
-            .swiper-container
-                .swiper-wrapper
-                    -for(j=0;j<20;j++)
-                        .swiper-slide
-                            .client-logo
-                                img(src="../assets/images/clients/rakuten.png", alt="rakuten")
-                        .swiper-slide
-                            .client-logo
-                                img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
+        .clients-swiper--01.swiper
+            .swiper-wrapper
+                -for(i=0;i<20;i++)
+                    .swiper-slide
+                        .client-logo
+                            img(src="../assets/images/clients/rakuten.png", alt="rakuten")
+                    .swiper-slide
+                        .client-logo
+                            img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
+        .clients-swiper--02.swiper
+            .swiper-wrapper
+                -for(j=0;j<20;j++)
+                    .swiper-slide
+                        .client-logo
+                            img(src="../assets/images/clients/rakuten.png", alt="rakuten")
+                    .swiper-slide
+                        .client-logo
+                            img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
     section.section-testimonials
         .container
             .testimonials-wrapper
-                .testimonials-swiper
-                    .swiper-container
-                        .swiper-wrapper
-                            .swiper-slide
-                                p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
-                                .quote-speaker
-                                    .speaker__avatar
-                                        img(src="../assets/images/testimonials/mediotec.jpg", alt="mediotec")
-                                    .speaker__name  Mediotec
-                                    .speaker__position Co.,Ltd Matsumoto Hidemori CEO
-                            .swiper-slide
-                                p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
-                                .quote-speaker
-                                    .speaker__avatar
-                                        img(src="../assets/images/testimonials/ogawa.jpeg", alt="ogawa")
-                                    .speaker__name  Mr.Ogawa
-                                    .speaker__position Assistant Manager, NTT DATA NJK Corporation
-                            .swiper-slide
-                                p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
-                                .quote-speaker
-                                    .speaker__avatar
-                                        img(src="../assets/images/testimonials/mediotec.jpg", alt="mediotec")
-                                    .speaker__name  Mediotec
-                                    .speaker__position Co.,Ltd Matsumoto Hidemori CEO
-                        .swiper-button-next
-                        .swiper-button-prev
+                .testimonials-swiper.swiper
+                    .swiper-wrapper
+                        .swiper-slide
+                            p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
+                            .quote-speaker
+                                .speaker__avatar
+                                    img(src="../assets/images/testimonials/mediotec.jpg", alt="mediotec")
+                                .speaker__name  Mediotec
+                                .speaker__position Co.,Ltd Matsumoto Hidemori CEO
+                        .swiper-slide
+                            p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
+                            .quote-speaker
+                                .speaker__avatar
+                                    img(src="../assets/images/testimonials/ogawa.jpeg", alt="ogawa")
+                                .speaker__name  Mr.Ogawa
+                                .speaker__position Assistant Manager, NTT DATA NJK Corporation
+                        .swiper-slide
+                            p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
+                            .quote-speaker
+                                .speaker__avatar
+                                    img(src="../assets/images/testimonials/mediotec.jpg", alt="mediotec")
+                                .speaker__name  Mediotec
+                                .speaker__position Co.,Ltd Matsumoto Hidemori CEO
+                    .swiper-button-next
+                    .swiper-button-prev
     section.section-awards
         .container
             .headding

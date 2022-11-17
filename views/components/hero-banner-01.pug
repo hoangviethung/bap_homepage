@@ -1,29 +1,61 @@
 section.hero-banner
-    .hero-banner-swiper
-        .swiper-container
-            .swiper-wrapper
-                a(href="#").swiper-slide
-                    .banner-image
-                        img(src="../assets/images/hero-banner/hero-banner-01.jpg", alt="hero-banner-01")
-                    .banner-content
-                        .banner-title BAP Tokyo Story
-                        .banner-category News
-                a(href="#").swiper-slide
-                    .banner-image
-                        img(src="../assets/images/hero-banner/hero-banner-02.jpg", alt="hero-banner-02")
-                    .banner-content
-                        .banner-title BAP Hai Noi Branch's Grand Opening
-                        .banner-category News
-                a(href="#").swiper-slide
-                    .banner-image
-                        img(src="../assets/images/hero-banner/hero-banner-03.jpg", alt="hero-banner-03")
-                    .banner-content
-                        .banner-title International Children's Day
-                        .banner-category News
-                a(href="#").swiper-slide
-                    .banner-image
-                        img(src="../assets/images/hero-banner/hero-banner-04.jpg", alt="hero-banner-04")
-                    .banner-content
-                        .banner-title BAP x DUT Blockchain Seminar
-                        .banner-category News
-            .swiper-pagination
+    .container
+        .hero-banner-wrapper
+            .hero-banner-content-main
+                .conntent
+                    h1 Technology
+                        br
+                        | innovation has no limit
+                        br
+                        | with BAP
+                    p Born with an inspiring vision “Contribute innovation to the world”, BAP IT CO.,JSC. stands for Be Advanced Partner, lives to treasure our Client and Staff as our lifetime-partner, continuously innovate and grow together.
+                .actions
+                    a.btn.btn-lg.btn-secondary(href="#")
+                        span Contact Us
+                        i.fas.fa-arrow-right
+                    a.btn.btn-lg.btn-outline-secondary(href="#") Download Company Profile
+                section.section-achievements
+                    .achievements
+                        .achievement__item
+                            .text
+                                h4 2
+                                p Countries
+                        .achievement__item
+                            .text
+                                h4 6
+                                p Cities
+                        .achievement__item
+                            .text
+                                h4 420
+                                p Employees
+                        .achievement__item
+                            .text
+                                h4 100
+                                p Clients
+                        .achievement__item
+                            .text
+                                h4 220
+                                p Projects
+            .hero-banner-swiper.swiper
+                .swiper-wrapper
+                    .swiper-slide
+                        .banner-image
+                            img(src="../assets/images/hero-banner/hero-banner-01.jpg", alt="hero-banner-01")
+                        .banner-content
+                            .banner-title BAP Tokyo Story
+                    .swiper-slide
+                        .banner-image
+                            img(src="../assets/images/hero-banner/hero-banner-02.jpg", alt="hero-banner-02")
+                        .banner-content
+                            .banner-title BAP Hai Noi Branch's Grand Opening
+                    .swiper-slide
+                        .banner-image
+                            img(src="../assets/images/hero-banner/hero-banner-03.jpg", alt="hero-banner-03")
+                        .banner-content
+                            .banner-title International Children's Day
+                    .swiper-slide
+                        .banner-image
+                            img(src="../assets/images/hero-banner/hero-banner-04.jpg", alt="hero-banner-04")
+                        .banner-content
+                            .banner-title BAP x DUT Blockchain Seminar
+                .swiper-pagination

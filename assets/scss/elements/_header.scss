@@ -1,10 +1,9 @@
 .header-default {
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 0;
     right: 0;
     z-index: 500;
-    height: 112px;
 }
 
 .header-bar {
@@ -12,10 +11,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    top: 20px;
-    right: 60px;
-    left: 60px;
     padding: 0 16px;
     height: 72px;
     background-color: #ffffff;
@@ -53,8 +48,8 @@
             margin-left: 36px;
         }
         > a {
-            transition: 0.3s color ease-in-out;
             &:not(.btn) {
+                transition: 0.3s color ease-in-out;
                 &:hover {
                     color: map-get($map: $theme-colors, $key: "secondary");
                 }
