@@ -18,8 +18,8 @@
             line-height: 80px;
         }
         p {
-            color: #ffffff;
-            font-size: 1.375rem;
+            color: rgba($color: #ffffff, $alpha: 0.8);
+            font-size: 1.125rem;
             margin-top: 16px;
         }
     }
@@ -37,6 +37,33 @@
             &:not(.btn-secondary),
             &:not(.btn-primary) {
                 color: #ffffff;
+            }
+        }
+    }
+    .achievements {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 24px;
+        position: relative;
+        z-index: 1;
+        margin-top: 56px;
+    }
+    .achievement__item {
+        text-align: center;
+        color: #ffffff;
+        .fas {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        .text {
+            h4 {
+                font-size: 2.5rem;
+                line-height: 1;
+                margin-bottom: 8px;
+                font-weight: 500;
+            }
+            p {
+                font-size: 1.25rem;
             }
         }
     }

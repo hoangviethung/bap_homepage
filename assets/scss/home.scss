@@ -131,7 +131,7 @@
 
 .section-global-company {
     background-color: map-get($map: $theme-colors, $key: "primary");
-    padding: 100px 0 150px;
+    padding: 100px 0;
     position: relative;
     z-index: 0;
     .global-wrapper {
@@ -164,16 +164,21 @@
             display: inline-block;
             margin-right: 8px;
         }
-        &:hover {
+        &:hover,
+        &.active {
             color: #fcb415;
             opacity: 1;
         }
     }
     .image-column {
         position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
         .marker {
             cursor: pointer;
-            background-color: #82c8ee;
+            background-color: rgb(130, 200, 238);
             border-radius: 10px;
             box-shadow: 0 0 0 7px rgba(129, 200, 238, 0.3);
             display: inline-block;
@@ -181,120 +186,104 @@
             position: absolute;
             transition: 0.3s all ease-in-out;
             width: 12px;
-            &[target="global_vi"] {
-                left: 79%;
-                top: 43%;
+            &[target="global_hanoi"] {
+                left: 68%;
+                top: 30%;
             }
-            &[target="global_jp"] {
-                left: 88.2%;
-                top: 26.4%;
+            &[target="global_hue"] {
+                left: 72%;
+                top: 40%;
             }
-            &:hover {
-                background-color: #fcb415;
+            &[target="global_danang"] {
+                left: 72%;
+                top: 46%;
+            }
+            &[target="global_hochiminh"] {
+                left: 66%;
+                top: 52%;
+            }
+            &[target="global_tokyo"] {
+                right: 0;
+                top: 0;
+            }
+            &[target="global_osaka"] {
+                right: 0;
+                top: 10%;
+            }
+            &:hover,
+            &.active {
+                background-color: rgb(252, 180, 21);
+                box-shadow: 0 0 0 7px rgba(252, 180, 21, 0.3);
             }
         }
     }
-    .locations {
+    .location__item {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: fit-content;
-        background: #fbfaf5;
-        border-radius: 50px;
+        background: rgba($color: #ffffff, $alpha: 0.2);
         display: flex;
-        align-items: center;
         opacity: 0;
         transition: 0.3s all ease-in-out;
         pointer-events: none;
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 1fr;
+        padding: 24px;
+        border-radius: 24px;
+        backdrop-filter: blur(4px);
         &.show {
             opacity: 1;
             pointer-events: visible;
         }
-    }
-    .locations-wrapper {
-        display: grid;
-        gap: 24px;
-        grid-template-columns: 1fr 1fr;
-        height: 100%;
-        width: 100%;
-        padding: 30px 50px;
-
         img {
             width: 100%;
-            border-radius: 50px;
+            border-radius: 24px;
         }
     }
-    .information__locations {
-        overflow-y: auto;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
-    .location__item {
-        .heading {
+    .location__info {
+        li {
+            color: #ffffff;
+            position: relative;
             display: flex;
             align-items: center;
-            margin-bottom: 8px;
-            span {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #ffffff;
-                width: 38px;
-                height: 38px;
-                border-radius: 50%;
-                background-color: #c9ced5;
-                font-weight: 500;
+            padding-left: 24px;
+            > a {
+                color: inherit;
+                transition: 0.3s all ease-in-out;
             }
-            h4 {
-                padding-left: 8px;
+            &:hover {
+                > a {
+                    color: #fcb415;
+                }
             }
-        }
-        p {
-            font-size: 0.875rem;
-        }
-        + .location__item {
-            margin-top: 16px;
-        }
-    }
-}
-
-.section-achievements {
-    position: relative;
-    z-index: 2;
-    background-color: transparent;
-    margin-top: 56px;
-    .achievements-title {
-        margin-bottom: 16px;
-        text-align: center;
-        color: map-get($map: $theme-colors, $key: "secondary");
-        font-weight: 700;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-    }
-    .achievements {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        column-gap: 24px;
-        position: relative;
-        z-index: 1;
-    }
-    .achievement__item {
-        color: #ffffff;
-        .fas {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-        }
-        .text {
-            h4 {
-                font-size: 2.5rem;
-                line-height: 1;
-                margin-bottom: 16px;
+            &:before {
+                font-family: map-get($map: $theme-fonts, $key: "icons");
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: inherit;
+                transition: 0.3s all ease-in-out;
             }
-            p {
-                font-size: 20px;
-                margin-top: 4px;
+            &:first-child {
+                &:before {
+                    content: "\f1ad";
+                }
+            }
+            &:nth-child(2) {
+                &:before {
+                    content: "\f3c5";
+                }
+            }
+            &:last-child {
+                &:before {
+                    content: "\f095";
+                }
+            }
+            + li {
+                margin-top: 16px;
             }
         }
     }

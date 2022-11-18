@@ -4,6 +4,15 @@
     left: 0;
     right: 0;
     z-index: 500;
+    transition: top 0.45s cubic-bezier(0.23, 1, 0.58, 1);
+    &.nav-up {
+        top: -72px;
+    }
+    &.sticky {
+        .header-bar {
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.078);
+        }
+    }
 }
 
 .header-bar {
@@ -70,10 +79,10 @@
 }
 
 .nav-sub-items-wrapper {
-    position: fixed;
-    top: calc(112px / 2);
-    right: 60px;
-    left: 60px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
     z-index: -1;
     padding: 100px 68px 56px;
     pointer-events: none;
@@ -104,6 +113,7 @@
     &.menu-item-hovered {
         pointer-events: visible;
         transition-delay: 1s;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.078);
         &:after {
             height: 100%;
         }

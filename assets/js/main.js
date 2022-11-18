@@ -52,13 +52,51 @@
             );
         },
         stickyHeader: function (e) {
-            $(window).scroll(function () {
+            // Hide Header on on scroll down
+            let didScroll;
+            let lastScrollTop = 0;
+            const delta = 5;
+            const navbarHeight = $(".header-default").outerHeight();
+
+            $(window).scroll(function (event) {
+                didScroll = true;
                 if ($(this).scrollTop() > 50) {
-                    $(".header--sticky").addClass("sticky");
+                    $(".header-default").addClass("sticky");
                 } else {
-                    $(".header--sticky").removeClass("sticky");
+                    $(".header-default").removeClass("sticky");
                 }
             });
+
+            setInterval(function () {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 250);
+
+            function hasScrolled() {
+                const st = $(window).scrollTop();
+
+                // Make sure they scroll more than delta
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+
+                // If they scrolled down and are past the navbar, add class .nav-up.
+                // This is necessary so you never see what is "behind" the navbar.
+                if (st > lastScrollTop && st > navbarHeight) {
+                    // Scroll Down
+                    $(".header-default")
+                        .removeClass("nav-down")
+                        .addClass("nav-up");
+                } else {
+                    // Scroll Up
+                    if (st + $(window).height() < $(document).height()) {
+                        $(".header-default")
+                            .removeClass("nav-up")
+                            .addClass("nav-down");
+                    }
+                }
+                lastScrollTop = st;
+            }
         },
         toggleMenuMobile() {
             $(".header-default .hamburger-icon").on("click", function (e) {

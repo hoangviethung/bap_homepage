@@ -139,52 +139,72 @@ block main
                             br
                             | We code while you sleep!
                     ul.countries
-                        li.country__item(target="global_vi") Vietnam - Head Office
-                        li.country__item(target="global_jp") Japan - Osaka & Tokyo Office
+                        li.country__item(target="global_hanoi") Ha Noi - Viet Nam Office
+                        li.country__item(target="global_danang") Da Nang - Vietnam Office
+                        li.country__item(target="global_hue") Hue - Viet Nam Office
+                        li.country__item(target="global_hochiminh") Ho Chi Minh - Viet Nam Office
+                        li.country__item(target="global_tokyo") Tokyo - Japan Office
+                        li.country__item(target="global_osaka") Osaka - Japan Office
                 .image-column
                     .image-map
                         img(src="../assets/images/global-company-image-map.png", alt="GLOBAL-COMPANY")
-                        .marker(target="global_vi")
-                        .marker(target="global_jp")
-                    .locations#global_vi
-                        .locations-wrapper
-                            img(src="../assets/images/global-company-image-vi.png", alt="GLOBAL-COMPANY")
-                            .information__locations
-                                .location__item
-                                    .heading
-                                        span 01
-                                        h4 Hà Nội
-                                    p 9F, Hòa bình Complex Building, 106 Hoàn Quốc Việt, Cầu Giấy, Hà Nội
-                                    a.btn.btn-sm.btn-primary(href="#") See Map
-                                .location__item
-                                    .heading
-                                        span 02
-                                        h4 Hồ Chí Minh
-                                    p 9F, Hòa bình Complex Building, 106 Hoàn Quốc Việt, Cầu Giấy, Hà Nội
-                                .location__item
-                                    .heading
-                                        span 03
-                                        h4 Đà Nẵng
-                                    p 9F, Hòa bình Complex Building, 106 Hoàn Quốc Việt, Cầu Giấy, Hà Nội
-                                .location__item
-                                    .heading
-                                        span 04
-                                        h4 Huế
-                                    p 9F, Hòa bình Complex Building, 106 Hoàn Quốc Việt, Cầu Giấy, Hà Nội
-                    .locations#global_jp
-                        .locations-wrapper
-                            img(src="../assets/images/global-company-image-jp.png", alt="GLOBAL-COMPANY")
-                            .information__locations
-                                .location__item
-                                    .heading
-                                        span 01
-                                        h4 Tokyo
-                                    p 103-0025 Lầu 5 tòa nhà Okamoto, 1-11-3 Nihonbashi, Kayabacho, Chuo-ku, Tokyo
-                                .location__item
-                                    .heading
-                                        span 02
-                                        h4 OSAKA
-                                    p Lầu 8 tòa nhà Toshiba Osaka, 4-2-12 Honmachi, Chuo-ku, Osaka
+                        .marker(target="global_hanoi")
+                        .marker(target="global_hue")
+                        .marker(target="global_danang")
+                        .marker(target="global_hochiminh")
+                        .marker(target="global_tokyo")
+                        .marker(target="global_osaka")
+                    .location__item#global_hanoi
+                        img(src="../assets/images/global-company-image-vi.png", alt="GLOBAL-COMPANY")
+                        ul.location__info
+                            li Hà Nội
+                            li
+                                a(href="https://www.google.com/maps" target="_blank") 9F, Hòa bình Complex Building, 106 Hoàn Quốc Việt, Cầu Giấy, Hà Nội
+                            li
+                                a(href="tel:(+84) 986 241 041") (+84) 986 241 041
+                    .location__item#global_hue
+                        img(src="../assets/images/global-company-image-vi.png", alt="GLOBAL-COMPANY")
+                        ul.location__info
+                            li Huế
+                            li
+                                a(href="https://www.google.com/maps" target="_blank") Lầu 5, 28 Đường Lý Thường Kiệt., Phường Vĩnh Ninh, Huế, Việt Nam
+                            li
+                                a(href="tel:(+84) 986 241 041") (+84) 2346 273 555
+                    .location__item#global_danang
+                        img(src="../assets/images/global-company-image-vi.png", alt="GLOBAL-COMPANY")
+                        ul.location__info
+                            li Đà Nẵng
+                            li
+                                a(href="https://www.google.com/maps" target="_blank") Lầu 10, 81 Đường Quang Trung, Quận Hải Châu, Đà Nẵng, Việt Nam
+                            li
+                                a(href="tel:(+84) 986 241 041") (+84) 2366 565 115
+                    .location__item#global_hochiminh
+                        img(src="../assets/images/global-company-image-vi.png", alt="GLOBAL-COMPANY")
+                        ul.location__info
+                            li
+                                p Hồ Chí Minh
+                            li
+                                a(href="https://www.google.com/maps" target="_blank") 17F Viettel Complex Building, 285 Cach Mang Thang 8, District 10, HCM
+                            li
+                                a(href="tel:(+84) 986 241 041") (+84) 37 2905 138
+                    .location__item#global_tokyo
+                        img(src="../assets/images/global-company-image-vi.png", alt="GLOBAL-COMPANY")
+                        ul.location__info
+                            li
+                                p Tokyo
+                            li
+                                a(href="https://www.google.com/maps" target="_blank") 103-0025 Lầu 5 tòa nhà Okamoto, 1-11-3 Nihonbashi, Kayabacho, Chuo-ku, Tokyo
+                            li
+                                a(href="tel:(+84) 986 241 041") (+81) 362 804 268
+                    .location__item#global_osaka
+                        img(src="../assets/images/global-company-image-jp.png", alt="GLOBAL-COMPANY")
+                        ul.location__info
+                            li
+                                p Osaka
+                            li
+                                a(href="https://www.google.com/maps" target="_blank") Lầu 8 tòa nhà Toshiba Osaka, 4-2-12 Honmachi, Chuo-ku, Osaka
+                            li
+                                a(href="tel:(+84) 986 241 041") (+81) 802 399 7280
     section.section-clients
         .title-default.ta-c
             h2 Our Clients

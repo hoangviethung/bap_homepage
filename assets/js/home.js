@@ -160,15 +160,25 @@
             $(".section-global-company [target]").hover(
                 function () {
                     // over
-                    const targetId = $(this).attr("target");
-                    $(".section-global-company .locations").each(function (
+                    const _this = $(this);
+                    $(".section-global-company .location__item").each(function (
                         index,
                         location,
                     ) {
-                        if ($(location).attr("id") == targetId) {
-                            $(".section-global-company .locations").removeClass(
-                                "show",
+                        if ($(location).attr("id") == _this.attr("target")) {
+                            $(
+                                ".section-global-company .location__item",
+                            ).removeClass("show");
+
+                            $(".section-global-company [target]").removeClass(
+                                "active",
                             );
+
+                            $(
+                                `.section-global-company [target=${_this.attr(
+                                    "target",
+                                )}]`,
+                            ).addClass("active");
 
                             $(location).addClass("show");
                         }
@@ -178,12 +188,13 @@
                     // out
                 },
             );
-            $(".section-global-company .locations").hover(
+            $(".section-global-company .location__item").hover(
                 function () {
                     // over
                 },
                 function () {
                     // out
+                    $(".section-global-company [target]").removeClass("active");
                     $(this).removeClass("show");
                 },
             );
