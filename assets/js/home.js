@@ -157,23 +157,34 @@
             );
         },
         hoverOffices() {
-            $(".section-global-company .country__item").hover(
+            $(".section-global-company [target]").hover(
                 function () {
                     // over
-
                     const targetId = $(this).attr("target");
                     $(".section-global-company .locations").each(function (
                         index,
                         location,
                     ) {
                         if ($(location).attr("id") == targetId) {
+                            $(".section-global-company .locations").removeClass(
+                                "show",
+                            );
+
                             $(location).addClass("show");
                         }
                     });
                 },
                 function () {
                     // out
-                    $(".section-global-company .locations").removeClass("show");
+                },
+            );
+            $(".section-global-company .locations").hover(
+                function () {
+                    // over
+                },
+                function () {
+                    // out
+                    $(this).removeClass("show");
                 },
             );
         },

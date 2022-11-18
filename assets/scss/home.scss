@@ -131,7 +131,7 @@
 
 .section-global-company {
     background-color: map-get($map: $theme-colors, $key: "primary");
-    padding: 100px 0 240px;
+    padding: 100px 0 150px;
     position: relative;
     z-index: 0;
     .global-wrapper {
@@ -171,6 +171,28 @@
     }
     .image-column {
         position: relative;
+        .marker {
+            cursor: pointer;
+            background-color: #82c8ee;
+            border-radius: 10px;
+            box-shadow: 0 0 0 7px rgba(129, 200, 238, 0.3);
+            display: inline-block;
+            height: 12px;
+            position: absolute;
+            transition: 0.3s all ease-in-out;
+            width: 12px;
+            &[target="global_vi"] {
+                left: 79%;
+                top: 43%;
+            }
+            &[target="global_jp"] {
+                left: 88.2%;
+                top: 26.4%;
+            }
+            &:hover {
+                background-color: #fcb415;
+            }
+        }
     }
     .locations {
         position: absolute;
@@ -184,8 +206,10 @@
         align-items: center;
         opacity: 0;
         transition: 0.3s all ease-in-out;
+        pointer-events: none;
         &.show {
             opacity: 1;
+            pointer-events: visible;
         }
     }
     .locations-wrapper {
@@ -195,6 +219,7 @@
         height: 100%;
         width: 100%;
         padding: 30px 50px;
+
         img {
             width: 100%;
             border-radius: 50px;
@@ -277,6 +302,7 @@
 
 .section-clients {
     overflow: hidden;
+    padding-top: 72px;
     .client-logo {
         background-color: #ffffff;
         border-radius: 16px;
@@ -301,18 +327,18 @@
             box-shadow: 0 2px 4px 0 #0000001a;
         }
     }
-    .clients-swiper--01 {
-        margin-top: 40px;
-        @media (max-width: 575.98px) {
-            margin-top: 16px;
-        }
-    }
     .clients-swiper--01,
     .clients-swiper--02 {
         padding: 16px 0;
         margin: 0 -4vw;
         @media (max-width: 575.98px) {
             padding: 8px 0;
+        }
+    }
+    .clients-swiper--01 {
+        margin-top: 40px;
+        @media (max-width: 575.98px) {
+            margin-top: 16px;
         }
     }
 }
