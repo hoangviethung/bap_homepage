@@ -129,6 +129,67 @@ block main
                     .swiper-slide
                         a(href="#" target="_blank").product-logo
                             img(src="../assets/images/startup-projects/lyberzy.jpg", alt="lyberzy")
+    section.section-awards
+        .container
+            .headding
+                h2 Top 10 Vietnam ICT Companies 2020
+                h2 Company Awarded by the VINASA
+            .award-images-and-actions
+                img(src="../assets/images/certification.png", alt="certification")
+                a(href="#").btn.btn-lg.btn-secondary
+                    span Read More
+                    i.fas.fa-long-arrow-alt-right
+            img.award-cup(src="../assets/images/section-awards-cup.png", alt="awards-cup")
+    section.section-clients
+        .title-default.ta-c
+            h2 Our Clients
+            p Regardless of the size and type of business of the company, there are examples of companies that using BAP developing teams.
+        .clients-swiper--01.swiper
+            .swiper-wrapper
+                -for(i=0;i<20;i++)
+                    .swiper-slide
+                        .client-logo
+                            img(src="../assets/images/clients/rakuten.png", alt="rakuten")
+                    .swiper-slide
+                        .client-logo
+                            img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
+        .clients-swiper--02.swiper
+            .swiper-wrapper
+                -for(j=0;j<20;j++)
+                    .swiper-slide
+                        .client-logo
+                            img(src="../assets/images/clients/rakuten.png", alt="rakuten")
+                    .swiper-slide
+                        .client-logo
+                            img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
+    section.section-testimonials
+        .container
+            .testimonials-wrapper
+                .testimonials-swiper.swiper
+                    .swiper-wrapper
+                        .swiper-slide
+                            p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
+                            .quote-speaker
+                                .speaker__avatar
+                                    img(src="../assets/images/testimonials/mediotec.jpg", alt="mediotec")
+                                .speaker__name  Mediotec
+                                .speaker__position Co.,Ltd Matsumoto Hidemori CEO
+                        .swiper-slide
+                            p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
+                            .quote-speaker
+                                .speaker__avatar
+                                    img(src="../assets/images/testimonials/ogawa.jpeg", alt="ogawa")
+                                .speaker__name  Mr.Ogawa
+                                .speaker__position Assistant Manager, NTT DATA NJK Corporation
+                        .swiper-slide
+                            p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
+                            .quote-speaker
+                                .speaker__avatar
+                                    img(src="../assets/images/testimonials/mediotec.jpg", alt="mediotec")
+                                .speaker__name  Mediotec
+                                .speaker__position Co.,Ltd Matsumoto Hidemori CEO
+                    .swiper-button-next
+                    .swiper-button-prev
     section.section-global-company
         .container
             .global-wrapper
@@ -205,64 +266,3 @@ block main
                                 a(href="https://www.google.com/maps" target="_blank") Lầu 8 tòa nhà Toshiba Osaka, 4-2-12 Honmachi, Chuo-ku, Osaka
                             li
                                 a(href="tel:(+84) 986 241 041") (+81) 802 399 7280
-    section.section-clients
-        .title-default.ta-c
-            h2 Our Clients
-            p Regardless of the size and type of business of the company, there are examples of companies that using BAP developing teams.
-        .clients-swiper--01.swiper
-            .swiper-wrapper
-                -for(i=0;i<20;i++)
-                    .swiper-slide
-                        .client-logo
-                            img(src="../assets/images/clients/rakuten.png", alt="rakuten")
-                    .swiper-slide
-                        .client-logo
-                            img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
-        .clients-swiper--02.swiper
-            .swiper-wrapper
-                -for(j=0;j<20;j++)
-                    .swiper-slide
-                        .client-logo
-                            img(src="../assets/images/clients/rakuten.png", alt="rakuten")
-                    .swiper-slide
-                        .client-logo
-                            img(src="../assets/images/clients/vingroup.jpg", alt="vingroup")
-    section.section-testimonials
-        .container
-            .testimonials-wrapper
-                .testimonials-swiper.swiper
-                    .swiper-wrapper
-                        .swiper-slide
-                            p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
-                            .quote-speaker
-                                .speaker__avatar
-                                    img(src="../assets/images/testimonials/mediotec.jpg", alt="mediotec")
-                                .speaker__name  Mediotec
-                                .speaker__position Co.,Ltd Matsumoto Hidemori CEO
-                        .swiper-slide
-                            p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
-                            .quote-speaker
-                                .speaker__avatar
-                                    img(src="../assets/images/testimonials/ogawa.jpeg", alt="ogawa")
-                                .speaker__name  Mr.Ogawa
-                                .speaker__position Assistant Manager, NTT DATA NJK Corporation
-                        .swiper-slide
-                            p.quote-content "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio aut, impedit libero dolores vel. Quam ut, totam officiis pariatur culpa molestiae sit illo? Quam ratione voluptas fugit mollitia et."
-                            .quote-speaker
-                                .speaker__avatar
-                                    img(src="../assets/images/testimonials/mediotec.jpg", alt="mediotec")
-                                .speaker__name  Mediotec
-                                .speaker__position Co.,Ltd Matsumoto Hidemori CEO
-                    .swiper-button-next
-                    .swiper-button-prev
-    section.section-awards
-        .container
-            .headding
-                h2 Top 10 Vietnam ICT Companies 2020
-                h2 Company Awarded by the VINASA
-            .award-images-and-actions
-                img(src="../assets/images/certification.png", alt="certification")
-                a(href="#").btn.btn-lg.btn-secondary
-                    span Read More
-                    i.fas.fa-long-arrow-alt-right
-            img.award-cup(src="../assets/images/section-awards-cup.png", alt="awards-cup")

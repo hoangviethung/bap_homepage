@@ -60,7 +60,7 @@
 
             $(window).scroll(function (event) {
                 didScroll = true;
-                if ($(this).scrollTop() > 50) {
+                if ($(this).scrollTop() > navbarHeight) {
                     $(".header-default").addClass("sticky");
                 } else {
                     $(".header-default").removeClass("sticky");
@@ -85,14 +85,14 @@
                 if (st > lastScrollTop && st > navbarHeight) {
                     // Scroll Down
                     $(".header-default")
-                        .removeClass("nav-down")
-                        .addClass("nav-up");
+                        .removeClass("header-down")
+                        .addClass("header-up");
                 } else {
                     // Scroll Up
                     if (st + $(window).height() < $(document).height()) {
                         $(".header-default")
-                            .removeClass("nav-up")
-                            .addClass("nav-down");
+                            .removeClass("header-up")
+                            .addClass("header-down");
                     }
                 }
                 lastScrollTop = st;

@@ -1,16 +1,12 @@
 .footer-default {
     background-color: darken(
         $color: map-get($map: $theme-colors, $key: "primary"),
-        $amount: 10%
+        $amount: 4%
     );
     padding: 72px 0 32px;
-    .footer-layout {
-        display: grid;
-        grid-template-columns: 360px auto;
-        gap: 24px;
-    }
     .footer-logo {
         width: 150px;
+        margin: 0 auto;
         img {
             filter: brightness(100);
         }
@@ -18,6 +14,7 @@
     .footer-nav,
     .footer-socials {
         display: flex;
+        justify-content: center;
         gap: 16px;
         margin-top: 24px;
         .nav__link {
@@ -26,7 +23,7 @@
             font-weight: 600;
             transition: 0.3s all ease-in-out;
             &:hover {
-                color: #fcb415;
+                color: map-get($map: $theme-colors, $key: "secondary");
             }
         }
         .social__link {
@@ -57,68 +54,6 @@
         font-family: map-get($map: $theme-fonts, $key: "title");
         padding-top: 32px;
         border-top: 1px solid rgba($color: #ffffff, $alpha: 0.08);
-    }
-    .footer-location-headding {
-        display: flex;
-        align-items: center;
-        font-size: 1.125rem;
-        color: #ffffff;
-        margin-bottom: 16px;
-        font-weight: 700;
-        .country {
-            overflow: hidden;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            margin-right: 8px;
-            img {
-                width: 100%;
-                height: 100%;
-                object-position: center center;
-                object-fit: cover;
-            }
-        }
-        &:not(:first-of-type) {
-            margin-top: 32px;
-        }
-    }
-    .footer-locations {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 24px;
-        row-gap: 32px;
-        .location__item {
-            color: #ffffff;
-            li {
-                position: relative;
-                display: flex;
-                align-items: center;
-                padding-left: 24px;
-                &:before {
-                    font-family: map-get($map: $theme-fonts, $key: "icons");
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                }
-                &:first-child {
-                    &:before {
-                        content: "\f1ad";
-                    }
-                }
-                &:nth-child(2) {
-                    &:before {
-                        content: "\f3c5";
-                    }
-                }
-                &:last-child {
-                    &:before {
-                        content: "\f095";
-                    }
-                }
-                + li {
-                    margin-top: 16px;
-                }
-            }
-        }
+        text-align: center;
     }
 }

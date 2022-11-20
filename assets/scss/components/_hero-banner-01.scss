@@ -1,12 +1,24 @@
 .hero-banner {
     background-color: map-get($map: $theme-colors, $key: "primary");
     padding: 200px 0 80px;
+    @media (max-width: 1024.98px) {
+        padding: 150px 0 80px;
+    }
+    @media (max-width: 575.98px) {
+        padding: 120px 0 36px;
+    }
 }
 
 .hero-banner-wrapper {
     display: grid;
     grid-template-columns: auto 600px;
     gap: 24px;
+    @media (max-width: 1199.98px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 1024.98px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .hero-banner-content-main {
@@ -15,12 +27,20 @@
             font-size: 3.5rem;
             color: #ffffff;
             font-weight: 700;
-            line-height: 80px;
+            @media (max-width: 1199.98px) {
+                font-size: 3rem;
+            }
+            @media (max-width: 575.98px) {
+                font-size: 2rem;
+            }
         }
         p {
             color: rgba($color: #ffffff, $alpha: 0.8);
             font-size: 1.125rem;
             margin-top: 16px;
+            @media (max-width: 575.98px) {
+                font-size: 0.875rem;
+            }
         }
     }
     .actions {
@@ -43,10 +63,13 @@
     .achievements {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        column-gap: 24px;
+        gap: 24px;
         position: relative;
         z-index: 1;
         margin-top: 56px;
+        @media (max-width: 767.98px) {
+            display: none;
+        }
     }
     .achievement__item {
         text-align: center;
@@ -70,25 +93,7 @@
 }
 
 .hero-banner-swiper {
-    width: 500px;
-    .swiper-slide {
-        border-radius: 24px;
-        border: 10px solid
-            lighten(
-                $color: map-get($map: $theme-colors, $key: "primary"),
-                $amount: 10%
-            );
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 40%;
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-        }
-    }
+    width: 100%;
     .swiper-horizontal > .swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
@@ -136,14 +141,29 @@
     .banner-image {
         position: relative;
         overflow: hidden;
-        min-height: 600px;
         height: 100%;
-        width: auto;
+        width: 100%;
+        border-radius: 24px;
+        border: 10px solid
+            lighten(
+                $color: map-get($map: $theme-colors, $key: "primary"),
+                $amount: 10%
+            );
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center center;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 40%;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
         }
     }
     .banner-content {
@@ -159,5 +179,8 @@
         font-size: 1.5rem;
         font-weight: 700;
         font-family: map-get($map: $theme-fonts, $key: "title");
+    }
+    @media (max-width: 1024.98px) {
+        display: none;
     }
 }

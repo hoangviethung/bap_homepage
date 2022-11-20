@@ -26,8 +26,7 @@
                 autoplay: {
                     delay: 5000,
                 },
-                effect: "cards",
-                grabCursor: true,
+                effect: "fade",
                 pagination: {
                     el: ".hero-banner-swiper .swiper-pagination",
                     clickable: true,
@@ -110,7 +109,7 @@
             const swiperFeaturedProjects = new Swiper(
                 ".featured-projects-swiper .swiper",
                 {
-                    slidesPerView: 3,
+                    slidesPerView: 1,
                     simulateTouch: false,
                     autoplay: {
                         delay: 5000,
@@ -120,7 +119,12 @@
                         nextEl: ".featured-projects-swiper .swiper-button-next",
                         prevEl: ".featured-projects-swiper .swiper-button-prev",
                     },
-                    on: {},
+                    breakpoints: {
+                        575: { slidesPerView: 2 },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                    },
                 },
             );
         },
