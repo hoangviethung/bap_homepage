@@ -101,9 +101,7 @@
         .tab-pane {
             padding: 0 40px 45px;
             position: relative;
-            opacity: 0;
             display: none;
-            transition: opacity 0.3s ease;
             > * {
                 position: relative;
                 z-index: 2;
@@ -153,11 +151,8 @@
                     content: none;
                 }
             }
-            &.active {
-                display: block;
-            }
             &.show {
-                opacity: 1;
+                display: block;
             }
             @media (max-width: 575.98px) {
                 padding: 0;

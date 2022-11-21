@@ -13,6 +13,7 @@
         },
         methods: function (e) {
             imJs.initSliderHeroBanner();
+            imJs.tabServices();
             imJs.initSliderClients();
             imJs.initSliderTestimonials();
             imJs.initSliderFeaturedProjects();
@@ -26,7 +27,7 @@
                 autoplay: {
                     delay: 5000,
                 },
-                effect: "fade",
+                effect: "cards",
                 pagination: {
                     el: ".hero-banner-swiper .swiper-pagination",
                     clickable: true,
@@ -158,6 +159,32 @@
                     },
                     on: {},
                 },
+            );
+        },
+        tabServices() {
+            $(".our-services .nav-tabs .nav-link").on("click", function (e) {
+                e.preventDefault();
+                const _this = $(this);
+                $(".our-services .tab-content .tab-pane").each(function (
+                    index,
+                    tanpane,
+                ) {
+                    if ($(tanpane).attr("id") == _this.attr("href")) {
+                        $(tanpane).addClass("show");
+                        _this.addClass("active");
+                    } else {
+                        $(tanpane).removeClass("show");
+                        $(".our-services .nav-tabs .nav-link")
+                            .not(_this)
+                            .removeClass("active");
+                    }
+                });
+            });
+            $(
+                ".our-services .nav-tabs .nav-item:first-of-type .nav-link",
+            ).addClass("active");
+            $(".our-services .tab-content .tab-pane:first-of-type").addClass(
+                "show",
             );
         },
         hoverOffices() {
