@@ -250,27 +250,27 @@
             position: absolute;
             transition: 0.3s all ease-in-out;
             width: 12px;
-            &[target="global_hanoi"] {
+            &[target="1"] {
                 left: 68%;
                 top: 30%;
             }
-            &[target="global_hue"] {
+            &[target="2"] {
                 left: 72%;
                 top: 40%;
             }
-            &[target="global_danang"] {
+            &[target="3"] {
                 left: 72%;
                 top: 46%;
             }
-            &[target="global_hochiminh"] {
+            &[target="4"] {
                 left: 66%;
                 top: 52%;
             }
-            &[target="global_tokyo"] {
+            &[target="5"] {
                 right: 0;
                 top: 0;
             }
-            &[target="global_osaka"] {
+            &[target="6"] {
                 right: 0;
                 top: 10%;
             }
