@@ -14,6 +14,7 @@
         methods: function (e) {
             imJs.initSliderHeroBanner();
             imJs.tabServices();
+            imJs.countNumberAchievements();
             imJs.initSliderClients();
             imJs.initSliderTestimonials();
             imJs.initSliderFeaturedProjects();
@@ -33,6 +34,33 @@
                     clickable: true,
                 },
                 on: {},
+            });
+        },
+        counterNumberAnimation(qSelector, start = 0, end, duration = 1000) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min(
+                    (timestamp - startTimestamp) / duration,
+                    1,
+                );
+                qSelector.text(Math.floor(progress * (end - start) + start));
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        },
+        countNumberAchievements() {
+            const _this = this;
+            $(".section-achievements .achievement__item").each(function (
+                index,
+                achievement,
+            ) {
+                const item = $(achievement).find("h4");
+                console.log(item);
+                const value = item.attr("value");
+                _this.counterNumberAnimation(item, 0, value, 1000);
             });
         },
         initSliderClients() {
