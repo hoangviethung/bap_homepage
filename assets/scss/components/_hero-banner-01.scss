@@ -64,7 +64,7 @@
     }
     .achievements {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 24px;
         position: relative;
         z-index: 1;
@@ -74,19 +74,21 @@
         }
     }
     .achievement__item {
-        text-align: center;
         color: #ffffff;
-        .fas {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-        }
-        .text {
+        .value {
+            display: flex;
+            align-items: center;
+            i {
+                font-size: 2rem;
+            }
             h4 {
                 font-size: 2.5rem;
                 line-height: 1;
-                margin-bottom: 8px;
                 font-weight: 500;
+                margin-left: 8px;
             }
+        }
+        .text {
             p {
                 font-size: 1.25rem;
             }

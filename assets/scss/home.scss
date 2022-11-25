@@ -417,7 +417,7 @@
         background: linear-gradient(180deg, #92caf91f, #92caf900);
         border-top-left-radius: 100px;
         border-top-right-radius: 100px;
-        padding: 115px 80px 60px;
+        padding: 80px 60px;
         @media (max-width: 767.98px) {
             border-top-left-radius: 24px;
             border-top-right-radius: 24px;
@@ -429,7 +429,6 @@
     }
     .quote-content {
         font-style: italic;
-        font-size: 1.25rem;
         margin: 0 auto 40px;
         max-width: 874px;
         width: 100%;
@@ -478,11 +477,27 @@
             font-family: map-get($map: $theme-fonts, $key: "icons");
             display: block;
             text-align: center;
-            font-size: 3.5rem;
+            font-size: 2rem;
             color: map-get($map: $theme-colors, $key: "secondary");
-            margin-bottom: 32px;
+            margin-bottom: 16px;
             opacity: 0.1;
         }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: map-get($map: $theme-colors, $key: "secondary");
+    }
+    .swiper-button-next:after,
+    .swiper-container-rtl .swiper-button-prev:after {
+        content: "\f178";
+    }
+    .swiper-button-prev:after,
+    .swiper-container-rtl .swiper-button-next:after {
+        content: "\f177";
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-family: map-get($map: $theme-fonts, $key: "icons");
     }
     @media (max-width: 575.98px) {
         padding-top: 32px;
@@ -616,12 +631,14 @@
             flex-wrap: wrap;
             margin-bottom: 8px;
             .category {
+                font-size: 0.75rem;
                 color: map-get($map: $theme-colors, $key: "secondary");
                 font-weight: 600;
                 letter-spacing: 1px;
                 text-transform: uppercase;
             }
             .date {
+                font-size: 0.75rem;
                 color: map-get($map: $theme-colors, $key: "txt-disable");
                 margin-bottom: 0;
                 margin-left: 22px;
@@ -647,8 +664,21 @@
             transition: 0.3s all cubic-bezier(0.04, -0.11, 0.67, 0.9);
         }
     }
+    .swiper-button-next:after,
+    .swiper-container-rtl .swiper-button-prev:after {
+        content: "\f178";
+    }
+    .swiper-button-prev:after,
+    .swiper-container-rtl .swiper-button-next:after {
+        content: "\f177";
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-family: map-get($map: $theme-fonts, $key: "icons");
+    }
     .swiper-button-next,
     .swiper-button-prev {
+        color: map-get($map: $theme-colors, $key: "secondary");
         top: 38%;
         display: none;
         @media (min-width: 1440px) {
@@ -681,6 +711,7 @@
         margin: 0 -4vw;
     }
     .title-startup-products {
+        font-size: 1.25rem;
         margin-bottom: 16px;
         text-align: center;
         color: map-get($map: $theme-colors, $key: "secondary");
