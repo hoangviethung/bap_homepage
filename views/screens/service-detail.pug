@@ -1,0 +1,110 @@
+extends ../layouts/layout
+
+block params
+    - class_body = "service-detail-page"
+    - title_page = "BAP Software - Service Detail"
+    - page_title = "Service Detail"
+    - url_bg_page_title = "background-image: url('../../assets/images/page-title/services.jpg')"
+block css
+    link(rel="stylesheet", href="./assets/css/service-detail.css")
+block js
+block main
+    include ../components/page-title
+    section.section-service-detail
+        .container
+            .row
+                .col-xl-4.col-lg-4
+                    .service-sidebar
+                        .sidebar-widget.service-sidebar-single
+                            ul.services
+                                li
+                                    a.current(href="service-detail.html") AI/IOT
+                                li
+                                    a(href="service-detail.html") AI/IOT
+                                li
+                                    a(href="service-detail.html") AI/IOT
+                                li
+                                    a(href="service-detail.html") AI/IOT
+                                li
+                                    a(href="service-detail.html") AI/IOT
+                                li
+                                    a(href="service-detail.html") AI/IOT
+                        .sidebar-widget.banner-widget
+                            .widget-content(style="background-image: url(https://kodesolution.com/html/2022/oitech-html/images/resource/contact.jpg);")
+                                .shape(style="background-image: url(https://kodesolution.com/html/2022/oitech-html/images/resource/overlay-shape.png);")
+                                .content-box
+                                    .icon-box
+                                        i.fas.fa-handshake-alt
+                                    h3 BE ADVANCED
+                                        br
+                                        | PARTNER
+                                    a.btn.btn-light(href="#") Contact us
+                .col-xl-8.col-lg-8
+                    .service-detail__banner
+                        img(src="../assets/images/services/ai-iot.png", alt="ai-iot")
+                    .services-detail__content
+                        h2 Service Overview
+                        p With over 20 engineers, we are one of a few companies offers both consultants and development engineer crews in AI field. We have great Data Sciencetist, Deep Learning Engineer, Machine Learning Engineer, together with BPO data labeling service, improve accuracy to save cost for customers. Java, Python, Lisp, Prolog…are development languages, implement with auto-train, re-train model gave us a lot of expeiences in building project from scratch.
+                        p When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        h3 Service Center
+                        p Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        ul.features
+                            li.feature__item Text Recognition
+                            li.feature__item Image Proccesing
+                            li.feature__item Natural Language Processing
+                            li.feature__item Voice Recognition
+                            li.feature__item Traing-cost optimization
+                        h3 Case Study
+                        .case-studies
+                            .case-study__item
+                                .image
+                                    a(href="#")
+                                        img(src="../assets/images/services/ai-iot.png", alt="ai-iot")
+                                .info-case
+                                    .meta
+                                        .heading-title
+                                            h5 AI/IOT
+                                            span.time 04-06-2020
+                                    .content-case
+                                        a(href="#")
+                                            h4 Smart OCR
+                                        p.lcl.lcl-4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi architecto voluptates. Cum amet vero labore! Cupiditate iusto officia quas assumenda quae. Laudantium ipsum, asperiores repudiandae sequi magni cupiditate deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, a tenetur. Nobis ullam, esse inventore velit numquam adipisci dolorem animi veritatis est atque magnam voluptas error. A excepturi iusto non?
+                            .case-study__item
+                                .image
+                                    a(href="#")
+                                        img(src="../assets/images/services/ai-iot.png", alt="ai-iot")
+                                .info-case
+                                    .meta
+                                        .heading-title
+                                            h5 AI/IOT
+                                            span.time 04-06-2020
+                                    .content-case
+                                        a(href="#")
+                                            h4 Smart OCR
+                                        p.lcl.lcl-4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi architecto voluptates. Cum amet vero labore! Cupiditate iusto officia quas assumenda quae. Laudantium ipsum, asperiores repudiandae sequi magni cupiditate deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, a tenetur. Nobis ullam, esse inventore velit numquam adipisci dolorem animi veritatis est atque magnam voluptas error. A excepturi iusto non?
+                            .case-study__item
+                                .image
+                                    a(href="#")
+                                        img(src="../assets/images/services/ai-iot.png", alt="ai-iot")
+                                .info-case
+                                    .meta
+                                        .heading-title
+                                            h5 AI/IOT
+                                            span.time 04-06-2020
+                                    .content-case
+                                        a(href="#")
+                                            h4 Smart OCR
+                                        p.lcl.lcl-4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi architecto voluptates. Cum amet vero labore! Cupiditate iusto officia quas assumenda quae. Laudantium ipsum, asperiores repudiandae sequi magni cupiditate deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, a tenetur. Nobis ullam, esse inventore velit numquam adipisci dolorem animi veritatis est atque magnam voluptas error. A excepturi iusto non?
+                            .case-study__item
+                                .image
+                                    a(href="#")
+                                        img(src="../assets/images/services/ai-iot.png", alt="ai-iot")
+                                .info-case
+                                    .meta
+                                        .heading-title
+                                            h5 AI/IOT
+                                            span.time 04-06-2020
+                                    .content-case
+                                        a(href="#")
+                                            h4 Smart OCR
+                                        p.lcl.lcl-4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi architecto voluptates. Cum amet vero labore! Cupiditate iusto officia quas assumenda quae. Laudantium ipsum, asperiores repudiandae sequi magni cupiditate deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, a tenetur. Nobis ullam, esse inventore velit numquam adipisci dolorem animi veritatis est atque magnam voluptas error. A excepturi iusto non?

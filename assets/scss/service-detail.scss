@@ -1,0 +1,258 @@
+@import "../scss/default/varivables.scss";
+
+.section-service-detail {
+    padding: 120px 0;
+    @media (max-width: 767.98px) {
+        padding: 36px 0;
+    }
+}
+
+.service-sidebar {
+    .services {
+        li {
+            a {
+                color: inherit;
+                position: relative;
+                display: block;
+                font-size: 18px;
+                font-weight: 600;
+                background-color: #ffffff;
+                padding: 17px 20px 17px 50px;
+                box-shadow: 20px 5px 20px 0px rgba(0, 0, 0, 0.05);
+                transition: all 0.3s ease;
+                &::before {
+                    content: "\f105";
+                    font-family: map-get($map: $theme-fonts, $key: "icons");
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: 0px;
+                    top: 0px;
+                    width: 32px;
+                    height: 100%;
+                    background-color: #f6f4ec;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #707582;
+                    transition: all 500ms ease;
+                }
+
+                &.current,
+                &:hover {
+                    padding-left: 80px;
+                    &::before {
+                        color: #ffffff;
+                        width: 60px;
+                        background-color: map-get(
+                            $map: $theme-colors,
+                            $key: "secondary"
+                        );
+                    }
+                }
+            }
+            + li {
+                margin-top: 10px;
+            }
+        }
+    }
+    .service-sidebar-single {
+        margin-bottom: 32px;
+    }
+    .banner-widget {
+        position: relative;
+        display: block;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.078);
+        .shape {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 100%;
+            width: 278px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+        }
+        .widget-content {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 45px 30px 40px 30px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .content-box {
+            position: relative;
+        }
+        .icon-box {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            background-color: map-get($map: $theme-colors, $key: "secondary");
+            color: #ffffff;
+            border-radius: 4px;
+            margin-bottom: 24px;
+        }
+        h3 {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+    }
+}
+
+.service-detail__banner {
+    margin-bottom: 24px;
+}
+
+.services-detail__content {
+    margin-top: 24px;
+    h2,
+    h3 {
+        margin: 24px 0;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2.25rem;
+    }
+    p {
+        color: #808287;
+        margin: 24px 0;
+    }
+    .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin: 24px 0;
+    }
+    .feature__item {
+        position: relative;
+        display: block;
+        border: 1px solid #e1e8e4;
+        padding: 16px;
+        transition: all 600ms ease;
+        &::before {
+            content: "\f058";
+            font-family: map-get($map: $theme-fonts, $key: "icons");
+            margin-right: 16px;
+        }
+        &:hover {
+            color: #ffffff;
+            background-color: map-get($map: $theme-colors, $key: "secondary");
+        }
+    }
+    .case-studies {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 32px;
+    }
+    .case-study__item {
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        gap: 24px;
+        .image {
+            position: relative;
+            overflow: hidden;
+            a {
+                display: block;
+            }
+            img {
+                width: 100%;
+                transition: all 300ms ease;
+            }
+            &:after {
+                background: rgba(255, 255, 255, 0.3);
+                bottom: 0;
+                content: "";
+                left: 50%;
+                position: absolute;
+                right: 51%;
+                top: 0;
+                opacity: 1;
+                pointer-events: none;
+                transition: all 400ms linear;
+            }
+        }
+        .heading-title {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            h5 {
+                padding-left: 55px;
+                position: relative;
+                font-weight: 500;
+                font-size: 16px;
+                text-transform: uppercase;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 38px;
+                    height: 4px;
+                    left: 0;
+                    top: 42%;
+                    background-color: map-get(
+                        $map: $theme-colors,
+                        $key: "secondary"
+                    );
+                }
+            }
+            .time {
+                text-transform: uppercase;
+                color: #a5a5a5;
+                font-size: 0.875rem;
+                display: flex;
+                align-items: center;
+                &::before {
+                    content: "|";
+                    font-size: 70%;
+                    padding-right: 16px;
+                }
+            }
+        }
+        .content-case {
+            a {
+                color: inherit;
+            }
+            h4 {
+                font-weight: 700;
+                font-size: 1.875rem;
+                padding: 12px 0;
+                transition: 0.3s all ease-in-out;
+                &:hover {
+                    color: map-get($map: $theme-colors, $key: "secondary");
+                }
+            }
+            p {
+                margin: 0;
+            }
+        }
+        + .case-study__item {
+            border-top: 1px solid map-get($map: $theme-colors, $key: "border");
+            padding-top: 32px;
+        }
+        &:hover {
+            .image {
+                img {
+                    transform: scale(1.1);
+                }
+                &:after {
+                    left: 0;
+                    right: 0;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
