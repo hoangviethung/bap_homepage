@@ -19,3 +19,28 @@
         -webkit-line-clamp: 5;
     }
 }
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    li {
+        color: #ffffff;
+        a {
+            color: inherit;
+            transition: 0.3s all ease-in-out;
+            &:hover {
+                color: #ffffff;
+            }
+        }
+        &:not(:last-child) {
+            color: map-get($map: $theme-colors, $key: "secondary");
+            &::after {
+                content: "\f105";
+                color: #ffffff;
+                font-family: map-get($map: $theme-fonts, $key: "icons");
+                margin-left: 16px;
+            }
+        }
+    }
+}

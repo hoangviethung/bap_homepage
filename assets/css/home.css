@@ -204,12 +204,6 @@
 
 @media (max-width: 767.98px) {
   .section-our-services {
-    padding-top: 56px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .section-our-services {
     padding-top: 36px;
   }
 }
@@ -623,6 +617,10 @@
 .section-awards {
   position: relative;
   background-color: #062350;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .section-awards > .container {
@@ -696,19 +694,6 @@
   .section-awards .award-cup {
     display: none;
   }
-}
-
-.section-awards:after {
-  content: "";
-  position: absolute;
-  background-image: url("../../assets/images/section-awards-bg.svg");
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  background-attachment: fixed;
 }
 
 .section-featured-projects {

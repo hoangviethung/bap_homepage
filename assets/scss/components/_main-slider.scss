@@ -1,19 +1,14 @@
-.hero-banner {
+.main-slider {
     background-color: map-get($map: $theme-colors, $key: "primary");
-    padding: 200px 0 80px;
+    padding-top: $height-header + $position-header-fixed;
     overflow: hidden;
-    @media (max-width: 1024.98px) {
-        padding: 150px 0 80px;
-    }
-    @media (max-width: 575.98px) {
-        padding: 120px 0 36px;
-    }
 }
 
-.hero-banner-wrapper {
+.main-slider-wrapper {
     display: grid;
     grid-template-columns: auto 600px;
     gap: 120px;
+    padding: 80px 0;
     @media (max-width: 1199.98px) {
         grid-template-columns: auto 500px;
         gap: 60px;
@@ -23,7 +18,7 @@
     }
 }
 
-.hero-banner-content-main {
+.main-slider-content {
     .conntent {
         h1 {
             font-size: 3.5rem;
@@ -96,7 +91,7 @@
     }
 }
 
-.hero-banner-swiper {
+.main-slider-swiper {
     width: 80%;
     .swiper-horizontal > .swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,

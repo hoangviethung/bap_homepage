@@ -22,7 +22,7 @@
             imJs.hoverOffices();
         },
         initSliderHeroBanner() {
-            const swiperHeroBanner = new Swiper(".hero-banner-swiper", {
+            const swiperHeroBanner = new Swiper(".main-slider-swiper", {
                 slidesPerView: 1,
                 speed: 1000,
                 autoplay: {
@@ -30,7 +30,7 @@
                 },
                 effect: "cards",
                 pagination: {
-                    el: ".hero-banner-swiper .swiper-pagination",
+                    el: ".main-slider-swiper .swiper-pagination",
                     clickable: true,
                 },
                 on: {},
@@ -58,7 +58,6 @@
                 achievement,
             ) {
                 const item = $(achievement).find("h4");
-                console.log(item);
                 const value = item.attr("value");
                 _this.counterNumberAnimation(item, 0, value, 1000);
             });

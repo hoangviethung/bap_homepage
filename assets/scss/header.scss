@@ -1,8 +1,5 @@
 @import "../scss/default/varivables.scss";
 
-$height-header: 72px;
-$position-header-fixed: 24px;
-
 .header-default {
     position: fixed;
     top: $position-header-fixed;
