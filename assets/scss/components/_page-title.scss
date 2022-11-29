@@ -25,5 +25,8 @@
         color: #ffffff;
         margin-bottom: 16px;
         font-family: map-get($map: $theme-fonts, $key: "title");
+        @media (max-width: 1024.98px) {
+            font-size: 3.5rem;
+        }
     }
 }

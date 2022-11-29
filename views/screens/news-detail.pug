@@ -1,0 +1,36 @@
+extends ../layouts/layout
+
+block params
+    - class_body = "case-study-detail-page"
+    - title_page = "BAP Software - Website/App"
+    - page_title = "Smart E-learning"
+    - url_bg_page_title = "background-image: url('../../assets/images/page-title/services.jpg')"
+block css
+    link(rel="stylesheet", href="./assets/css/news-detail.css")
+block js
+block main
+    include ../components/page-title
+    section.section-news-detail
+        .container
+            .row
+                .col-xl-8.col-lg-7
+                    .news-detail__banner
+                        img(src="../assets/images/services/ai-iot.png", alt="ai-iot")
+                    .news-detail__content
+                        p Challenges: Building learning contents are one of the most important factors of businesses to enhance the quality of teaching as well as learners’ experience, so does your business own a learning management system (LMS) to do it? BAP offers Smart E-learning in this situation, which is a solution to help users gain the best experience in learning, teaching.
+                        p Solutions: Integrated with Big Data, AI technologies, Smart E-learning is a smart learning management system that allows targets like educational centers which can customize according to personal positions such as Learners, Teachers or trainers, and Administrators. And each position has its own functions:
+                        ul
+                            li For learners, they also can attend the Livestream lessons with teachers, and they can take full advantage of chatting with teachers, groups to discuss with each other. The Livestream feature is easy to use like Live Dreamer Application which is another app developed by BAP. Also, they also keep track of their competencies, awards, grade, calendar for scheduling course, or store their private documents on this platform.
+                            li On this platform, teachers can upload their teaching contents, create tests, and manage learners’ badges, they also generate contents with various formats including video, PDF, Word, Excel,…and they will score learners through assignments as well. Besides, they are able to create groups to discuss lessons, questions,…
+                            li For Administrators, who are able to manage teachers and students to see what they are doing, whether or not their curricula are effective from report analytics. Or they also add, customize the content, even revise the authority of others. They either delegate to teachers with many functions like reports, plugins if they want.
+                        p For functions of creating interactions on interfaces like Forum, Wiki,..that allows users to discuss about knowledge, topic,….The platform is available on Web and Applications including iOS, as well as Android, so that users can try it anytime, anywhere they want.
+                        p This is considered as one of the successful E-learning platforms from BAP, we are confident to provide various technologies including Big Data, AI, Blockchain customizing businesses’ requirements. Also, our engineers will give ideas and consult to businesses at the first stage to enhance the success of projects, and we assure that each of our product will have the best quality to use in reality. If your business wants to develop any technological products, please feel free to contact us.
+                .col-xl-4.col-lg-5
+                    .sidebar
+                        .sidebar__single.sidebar__post
+                            h3.sidebar__title Latest Posts
+                            ul.sidebar__post-list
+                                li
+                                    a(href="#")
+                                        .sidebar__post-image
+                                        .sidebar__post-content Challenge: Customer who have big connection with anime  publishers in Japan. They really want to build  , What can BAP provide?

@@ -1,0 +1,49 @@
+@import "../scss/default/varivables.scss";
+
+.section-news-detail {
+    padding: 120px 0;
+    position: relative;
+    @media (max-width: 1024.98px) {
+        padding: 36px 0;
+    }
+}
+
+.news-detail__banner {
+    margin-bottom: 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.news-detail__content {
+    h2,
+    h3 {
+        margin: 24px 0;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2.25rem;
+    }
+    p {
+        margin: 24px 0;
+    }
+    ul {
+        padding-left: 24px;
+        list-style: disc;
+    }
+}
+
+.sidebar__post {
+    position: relative;
+    display: block;
+    padding: 46px 30px 30px;
+    background-color: rgba(
+        $color: map-get($map: $theme-colors, $key: "secondary"),
+        $alpha: 0.2
+    );
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}

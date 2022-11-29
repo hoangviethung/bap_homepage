@@ -1,0 +1,69 @@
+extends ../layouts/layout
+
+block params
+    - class_body = "case-studies-page"
+    - title_page = "BAP Software - Case Study"
+    - page_title = "Case Study"
+    - url_bg_page_title = "background-image: url('../../assets/images/page-title/services.jpg')"
+block css
+    link(rel="stylesheet", href="./assets/css/services.css")
+block js
+block main
+    include ../components/page-title
+    section.section-services
+        .container
+            .services
+                .service__item
+                    .image-box
+                        a(href="case-study-detail.html")
+                            img(src="../assets/images/services/ai-iot.png", alt="ai-iot")
+                    .content-box
+                        h5
+                            a(href="case-study-detail.html") AI/IOT
+                        p.lcl.lcl-3 With over 20 engineers, we are one of a few companies offers both consultants and development engineer crews in AI field. We have great Data Sciencetist, Deep Learning Engineer, Machine Learning Engineer, together with BPO data labeling service, improve accuracy to save cost for customers. Java, Python, Lisp, Prolog...are...
+                        a.btn-read-more(href="case-study-detail.html") Read More
+                .service__item
+                    .image-box
+                        a(href="case-study-detail.html")
+                           img(src="../assets/images/services/blockchain.png", alt="blockchain")
+                    .content-box
+                        h5
+                            a(href="case-study-detail.html") Blockchain
+                        p.lcl.lcl-3 With over 20 engineers, we are one of a few companies offers both consultants and development engineer crews in AI field. We have great Data Sciencetist, Deep Learning Engineer, Machine Learning Engineer, together with BPO data labeling service, improve accuracy to save cost for customers. Java, Python, Lisp, Prolog...are...
+                        a.btn-read-more(href="case-study-detail.html") Read More
+                .service__item
+                    .image-box
+                        a(href="case-study-detail.html")
+                            img(src="../assets/images/services/business-application.png", alt="business-application")
+                    .content-box
+                        h5
+                            a(href="case-study-detail.html") Business Application
+                        p.lcl.lcl-3 With over 20 engineers, we are one of a few companies offers both consultants and development engineer crews in AI field. We have great Data Sciencetist, Deep Learning Engineer, Machine Learning Engineer, together with BPO data labeling service, improve accuracy to save cost for customers. Java, Python, Lisp, Prolog...are...
+                        a.btn-read-more(href="case-study-detail.html") Read More
+                .service__item
+                    .image-box
+                        a(href="case-study-detail.html")
+                            img(src="../assets/images/services/game.png", alt="game")
+                    .content-box
+                        h5
+                            a(href="case-study-detail.html") Game
+                        p.lcl.lcl-3 With over 20 engineers, we are one of a few companies offers both consultants and development engineer crews in AI field. We have great Data Sciencetist, Deep Learning Engineer, Machine Learning Engineer, together with BPO data labeling service, improve accuracy to save cost for customers. Java, Python, Lisp, Prolog...are...
+                        a.btn-read-more(href="case-study-detail.html") Read More
+                .service__item
+                    .image-box
+                        a(href="case-study-detail.html")
+                            img(src="../assets/images/services/sap-erp.png", alt="sap-erp")
+                    .content-box
+                        h5
+                            a(href="case-study-detail.html") SAP/ERP
+                        p.lcl.lcl-3 With over 20 engineers, we are one of a few companies offers both consultants and development engineer crews in AI field. We have great Data Sciencetist, Deep Learning Engineer, Machine Learning Engineer, together with BPO data labeling service, improve accuracy to save cost for customers. Java, Python, Lisp, Prolog...are...
+                        a.btn-read-more(href="case-study-detail.html") Read More
+                .service__item
+                    .image-box
+                        a(href="case-study-detail.html")
+                            img(src="../assets/images/services/website-app.png", alt="website-app")
+                    .content-box
+                        h5
+                            a(href="case-study-detail.html") WEBSITE /SMARTPHONE APP
+                        p.lcl.lcl-3 With over 20 engineers, we are one of a few companies offers both consultants and development engineer crews in AI field. We have great Data Sciencetist, Deep Learning Engineer, Machine Learning Engineer, together with BPO data labeling service, improve accuracy to save cost for customers. Java, Python, Lisp, Prolog...are...
+                        a.btn-read-more(href="case-study-detail.html") Read More

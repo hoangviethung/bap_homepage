@@ -1,9 +1,9 @@
 extends ../layouts/layout
 
 block params
-    - class_body = "service-detail-page"
-    - title_page = "BAP Software - Block Chain"
-    - page_title = "Block Chain"
+    - class_body = "case-study-detail-page"
+    - title_page = "BAP Software - Website/App"
+    - page_title = "Website/App"
     - url_bg_page_title = "background-image: url('../../assets/images/page-title/services.jpg')"
 block css
     link(rel="stylesheet", href="./assets/css/service-detail.css")
@@ -18,11 +18,11 @@ block main
                         .sidebar-widget.service-sidebar-single
                             ul.services
                                 li
-                                    a.current(href="service-detail.html") BLOCKCHAIN
+                                    a(href="service-detail.html") BLOCKCHAIN
                                 li
                                     a(href="service-detail.html") AI/IOT
                                 li
-                                    a(href="service-detail.html") WEBSITE /SMARTPHONE APP
+                                    a.current(href="service-detail.html") WEBSITE /SMARTPHONE APP
                                 li
                                     a(href="service-detail.html") BUSINESS APPLICATION
                                 li
@@ -40,23 +40,9 @@ block main
                                         | PARTNER
                                     a.btn.btn-light(href="#") Contact us
                 .col-lg-8
-                    .service-detail__banner
-                        img(src="../assets/images/services/ai-iot.png", alt="ai-iot")
                     .services-detail__content
-                        h2 Service Overview
-                        p With over 20 engineers, we are one of a few companies offers both consultants and development engineer crews in AI field. We have great Data Sciencetist, Deep Learning Engineer, Machine Learning Engineer, together with BPO data labeling service, improve accuracy to save cost for customers. Java, Python, Lisp, Prolog…are development languages, implement with auto-train, re-train model gave us a lot of expeiences in building project from scratch.
-                        p When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        h3 Service Center
-                        p Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                        ul.features
-                            li.feature__item Text Recognition
-                            li.feature__item Image Proccesing
-                            li.feature__item Natural Language Processing
-                            li.feature__item Voice Recognition
-                            li.feature__item Traing-cost optimization
-                        h3 Case Study
                         .case-studies
-                            -for(i=0;i<4;i++)
+                            -for(i=0;i<8;i++)
                                 .case-study__item
                                     .image
                                         a(href="news-detail.html")
