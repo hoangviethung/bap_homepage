@@ -1,0 +1,128 @@
+.section-related-news-slider {
+    padding: 72px 0;
+    overflow: hidden;
+    .related-news-swiper {
+        position: relative;
+        margin-top: 32px;
+        @media (max-width: 575.98px) {
+            margin-top: 16px;
+        }
+    }
+    .related-news-actions {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 32px;
+    }
+    .swiper-slide {
+        padding: 8px;
+    }
+    .related-news__item {
+        &:hover {
+            .item__image {
+                img {
+                    transform: scale(1.08);
+                }
+            }
+            .item__desc {
+                h3 {
+                    color: map-get($map: $theme-colors, $key: "secondary");
+                }
+            }
+        }
+    }
+    .item__image {
+        align-items: center;
+        background-color: rgba(165, 166, 246, 0.12);
+        border-radius: 16px;
+        display: flex;
+        height: 250px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        padding: 0;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-position: center center;
+            transition: 0.3s all cubic-bezier(0.04, -0.11, 0.67, 0.9);
+        }
+    }
+    .item__desc {
+        .meta {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+            .category {
+                font-size: 0.75rem;
+                color: map-get($map: $theme-colors, $key: "secondary");
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .date {
+                font-size: 0.75rem;
+                color: map-get($map: $theme-colors, $key: "txt-disable");
+                margin-bottom: 0;
+                margin-left: 22px;
+                position: relative;
+                &:before {
+                    content: "|";
+                    left: -12px;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 0.02em;
+            color: map-get($map: $theme-colors, $key: "primary");
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: 0.3s all cubic-bezier(0.04, -0.11, 0.67, 0.9);
+        }
+    }
+    .swiper-button-next:after,
+    .swiper-container-rtl .swiper-button-prev:after {
+        content: "\f178";
+    }
+    .swiper-button-prev:after,
+    .swiper-container-rtl .swiper-button-next:after {
+        content: "\f177";
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-family: map-get($map: $theme-fonts, $key: "icons");
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: map-get($map: $theme-colors, $key: "secondary");
+        top: 38%;
+        display: none;
+        @media (min-width: 1440px) {
+            display: block;
+        }
+    }
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev {
+        @media (min-width: 1440px) {
+            right: -56px;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next {
+        @media (min-width: 1440px) {
+            left: -56px;
+        }
+    }
+    @media (max-width: 575.98px) {
+        padding: 36px 0;
+    }
+}
