@@ -1,0 +1,110 @@
+extends ../layouts/layout
+
+block params
+    - class_body = "about-page"
+    - title_page = "BAP Software - About"
+block css
+    link(rel="stylesheet", href="./assets/css/about.css")
+block js
+    script(src="../assets/js/about.js") 
+block main
+    include ../components/about-hero
+    section.section-about-ceo
+        .container
+            .about-ceo-wrapper
+                .ceo-image
+                    img(src="../assets/images/about/about-ceo.png", alt="dao-ngoc-thanh")
+                .ceo-message
+                    h4 CEO MESSAGE
+                    h2 “We make sure Every Organization on the planet can approach State-of-the-art Technology Solutions”
+                    p I am so blessed to have experiences from some great Japanese corporations as a software engineer, especially influenced by CyberAgent Group, where all of the products and services are under the spirit of “kodawari”, along with the rapid growth, always update new technologies and challenges. I have been setting up such a company in Vietnam where people always work hard, and always excited when facing challenging jobs.
+                    p It's so great that within a short period of time, BAP GROUP has received the credibility from domestic as well as the foreign clients, especially in Japan, has been given the responsibility to develop many highly innovative products. We would like to express our gratitude to those who have been providing us opportunities, we believe with the quality of our products.
+                    p Besides, we are aiming to build our consultant teams, who are skillful in technology and good at foreign languages, in order to provide customers with the most effective advice. Moreover, we are building startups of BAP GROUP, to apply technology into life and provide solutions for essential demands in user's life. Globalizing our Startups is our vision in the near future.
+                    .ceo-signature
+                        img(src="../assets/images/about/ceo-name.png", alt="dao-ngoc-thanh")
+    section.section-about-history
+        .container
+            .title-default.center
+                h2 History
+            .about-history-wrapper(style="background-image: url('../../assets/images/about/about_us_history.svg')")
+                .history__item
+                    h3 2016
+                    p The first working day of the company
+                .history__item
+                    h3 2017
+                    p Number of employees: 70 Location: Floor 4, 5, Quang Dong Building 106 – 108 Nui Thanh, Da Nang City
+                .history__item
+                    h3 2018
+                    p The first working day of the company
+                .history__item
+                    h3 2019
+                    p Opened new office in Osaka, Japan
+                .history__item
+                    h3 2020
+                    p Established Ho Chi Minh branch on 17th floor, Tower B, Viettel Complex Building, 285 Cach Mang Thang Tam Street, District 10
+                .history__item
+                    h3 2022
+                    p Established Ha Noi branch on 9th Floor, Hoa Binh Complex Building, 106 Hoang Quoc Viet, Cau Giay, Ha Noi
+    section.section-about-keymembers
+        .container
+            .title-default
+                h2 Key Members
+                p.sm Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    br
+                    | Laboriosam dolor facilis rem alias perspiciatis dolorem exercitationem tenetur.
+            .keymembers-swiper.swiper
+                .swiper-wrapper
+                    -for(i=1;i<9;i++)
+                        .swiper-slide
+                            .member-item
+                                .item__image
+                                    img(src=`../assets/images/about/${i}.png`, alt="quan")
+                                    .item__name Nguyễn Trung Quân
+                                    .item__position BAP IT Deputy Director General
+                                .item__desc
+                                    ul
+                                        li
+                                            span 2014
+                                            span VNU University of Engineering and Technology
+                                        li
+                                            span 2014
+                                            span VNU University of Engineering and Technology
+                                        li
+                                            span 2014
+                                            span VNU University of Engineering and Technology
+                                        li
+                                            span 2014
+                                            span VNU University of Engineering and Technology
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto, numquam similique minima tenetur hic vero incidunt qui atque quos totam illum quibusdam dolorem perspiciatis deleniti odit, doloribus rerum eos.
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto, numquam similique minima tenetur hic vero incidunt qui atque quos totam illum quibusdam dolorem perspiciatis deleniti odit, doloribus rerum eos.
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto, numquam similique minima tenetur hic vero incidunt qui atque quos totam illum quibusdam dolorem perspiciatis deleniti odit, doloribus rerum eos.
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto, numquam similique minima tenetur hic vero incidunt qui atque quos totam illum quibusdam dolorem perspiciatis deleniti odit, doloribus rerum eos.
+    section.section-our-awards
+        .container
+            .title-default
+                h2 Achievements and awards
+                p.sm Thanks to our exvellent engineers, we recived many awards
+            .our-awards-wrapper
+                .awards
+                    .award__item
+                        .item__number 01
+                        .item__desc
+                            time Monday / 05.12.2022
+                            a(href="#") Become a member of Vietnam Software Association (VINASA)
+                    .award__item
+                        .item__number 02
+                        .item__desc
+                            time Monday / 05.12.2022
+                            a(href="#") Become a member of Vietnam Software Association (VINASA)
+                    .award__item
+                        .item__number 03
+                        .item__desc
+                            time Monday / 05.12.2022
+                            a(href="#") Become a member of Vietnam Software Association (VINASA)
+                    a.btn.btn-primary(href="#")
+                        span Read More
+                        i.fas.fa-arrow-right
+                .awards__images
+                    img(src="../assets/images/about/award-01.png", alt="")
+                    img(src="../assets/images/about/award-02.png", alt="")
+    include ../components/global-company

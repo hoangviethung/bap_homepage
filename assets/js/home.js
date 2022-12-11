@@ -19,7 +19,6 @@
             imJs.initSliderTestimonials();
             imJs.initSliderFeaturedProjects();
             imJs.initSliderStartupProducts();
-            imJs.hoverOffices();
         },
         initSliderHeroBanner() {
             const swiperHeroBanner = new Swiper(".main-slider-swiper", {
@@ -215,49 +214,6 @@
             ).addClass("active");
             $(".our-services .tab-content .tab-pane:first-of-type").addClass(
                 "show",
-            );
-        },
-        hoverOffices() {
-            $(".section-global-company [target]").hover(
-                function () {
-                    // over
-                    const _this = $(this);
-                    $(".section-global-company .location__item").each(function (
-                        index,
-                        location,
-                    ) {
-                        if ($(location).attr("id") == _this.attr("target")) {
-                            $(
-                                ".section-global-company .location__item",
-                            ).removeClass("show");
-
-                            $(".section-global-company [target]").removeClass(
-                                "active",
-                            );
-
-                            $(
-                                `.section-global-company [target=${_this.attr(
-                                    "target",
-                                )}]`,
-                            ).addClass("active");
-
-                            $(location).addClass("show");
-                        }
-                    });
-                },
-                function () {
-                    // out
-                },
-            );
-            $(".section-global-company .location__item").hover(
-                function () {
-                    // over
-                },
-                function () {
-                    // out
-                    $(".section-global-company [target]").removeClass("active");
-                    $(this).removeClass("show");
-                },
             );
         },
     };

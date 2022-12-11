@@ -15,6 +15,7 @@
             imJs.stickyHeader();
             imJs.toggleMenuMobile();
             imJs.hoverHeaderMenuItem();
+            imJs.hoverOffices();
         },
         hoverHeaderMenuItem: function (e) {
             let previous_menu_item_hovered;
@@ -103,6 +104,49 @@
                 $(".header-default .main-menu").toggleClass("show");
                 $("body").toggleClass("no-scroll");
             });
+        },
+        hoverOffices() {
+            $(".section-global-company [target]").hover(
+                function () {
+                    // over
+                    const _this = $(this);
+                    $(".section-global-company .location__item").each(function (
+                        index,
+                        location,
+                    ) {
+                        if ($(location).attr("id") == _this.attr("target")) {
+                            $(
+                                ".section-global-company .location__item",
+                            ).removeClass("show");
+
+                            $(".section-global-company [target]").removeClass(
+                                "active",
+                            );
+
+                            $(
+                                `.section-global-company [target=${_this.attr(
+                                    "target",
+                                )}]`,
+                            ).addClass("active");
+
+                            $(location).addClass("show");
+                        }
+                    });
+                },
+                function () {
+                    // out
+                },
+            );
+            $(".section-global-company .location__item").hover(
+                function () {
+                    // over
+                },
+                function () {
+                    // out
+                    $(".section-global-company [target]").removeClass("active");
+                    $(this).removeClass("show");
+                },
+            );
         },
         backToTopInit: function () {
             // declare variable

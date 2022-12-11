@@ -160,15 +160,24 @@
         }
     }
     .feature__item {
+        cursor: pointer;
         position: relative;
         display: block;
         border: 1px solid #e1e8e4;
         padding: 16px;
         transition: all 600ms ease;
-        &::before {
-            content: "\f058";
-            font-family: map-get($map: $theme-fonts, $key: "icons");
-            margin-right: 16px;
+        .item__title {
+            font-weight: 600;
+            display: inline-block;
+            &::before {
+                content: "\f058";
+                font-family: map-get($map: $theme-fonts, $key: "icons");
+                margin-right: 16px;
+            }
+        }
+        .item__desc {
+            font-size: 0.875rem;
+            margin-top: 16px;
         }
         &:hover {
             color: #ffffff;

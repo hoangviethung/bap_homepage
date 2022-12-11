@@ -18,6 +18,11 @@
             font-size: 0.875rem;
         }
     }
+    &.center {
+        h2 {
+            text-align: center;
+        }
+    }
     &.dark {
         h2 {
             color: #ffffff;
