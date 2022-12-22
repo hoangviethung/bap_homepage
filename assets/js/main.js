@@ -13,9 +13,14 @@
         },
         methods: function (e) {
             imJs.stickyHeader();
-            imJs.toggleMenuMobile();
-            imJs.hoverHeaderMenuItem();
             imJs.hoverOffices();
+            if ($(window).width() > 1200) {
+                imJs.hoverHeaderMenuItem();
+            }
+            if ($(window).width() < 1200) {
+                imJs.toggleMenuMobile();
+                imJs.initNavigationMobile();
+            }
         },
         hoverHeaderMenuItem: function (e) {
             let previous_menu_item_hovered;
@@ -99,11 +104,27 @@
                 lastScrollTop = st;
             }
         },
-        toggleMenuMobile() {
-            $(".header-default .hamburger-icon").on("click", function (e) {
-                $(".header-default .main-menu").toggleClass("show");
-                $("body").toggleClass("no-scroll");
+        initNavigationMobile() {
+            $(".nav-sub-items-wrapper")
+                .parent(".nav__item")
+                .addClass("has-sub-nav-mobile");
+            $(".has-sub-nav-mobile").on("click", function () {
+                $(".has-sub-nav-mobile")
+                    .not(this)
+                    .find(".nav-sub-items-wrapper")
+                    .slideUp();
+                $(this).find(".nav-sub-items-wrapper").slideToggle();
             });
+        },
+        toggleMenuMobile() {
+            $(".header-default .headertoggle-full-navigation").on(
+                "click",
+                function (e) {
+                    $(this).toggleClass("active");
+                    $(".header-default .header-function").toggleClass("show");
+                    $("body").toggleClass("no-scroll");
+                },
+            );
         },
         hoverOffices() {
             $(".section-global-company [target]").hover(

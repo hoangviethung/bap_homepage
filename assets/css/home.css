@@ -701,28 +701,71 @@
 }
 
 .section-why-us .why-us-content p {
-  font-size: 1.125rem;
   margin: 16px 0;
 }
 
-.section-why-us .why-us-content ul li::before {
-  content: "\f178";
-  font-family: "Font Awesome 5 Pro";
-  margin-right: 4px;
+.section-why-us .why-us-content ul li + li {
+  margin-top: 16px;
 }
 
-.section-why-us .why-us-content ul li + li {
-  margin-top: 8px;
+.section-why-us .why-us-content ul li span {
+  display: block;
 }
 
 .section-why-us .why-us-content ul li span:first-child {
   font-weight: 600;
+}
+
+.section-why-us .why-us-content ul li span:first-child::before {
+  color: #0057e2;
+}
+
+.section-why-us .why-us-content ul li span::before {
+  font-family: "Font Awesome 5 Pro";
   margin-right: 8px;
+}
+
+.section-why-us .why-us-content ul li span + span {
+  font-size: 0.875rem;
+  margin-top: 8px;
+}
+
+.section-why-us .why-us-content ul li span + span:before {
+  content: "\f00c";
+  padding-left: 24px;
+}
+
+.section-why-us .why-us-content ul li:first-child span:first-child::before {
+  content: "\f0c0";
+}
+
+.section-why-us .why-us-content ul li:nth-child(2) span:first-child::before {
+  content: "\f121";
+}
+
+.section-why-us .why-us-content ul li:nth-child(3) span:first-child::before {
+  content: "\f49e";
+}
+
+.section-why-us .why-us-content ul li:last-child span:first-child::before {
+  content: "\f57e";
+}
+
+.section-why-us .why-us-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 @media (max-width: 1024.98px) {
   .section-why-us .why-us-image {
     display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-why-us {
+    padding-top: 36px;
   }
 }
 

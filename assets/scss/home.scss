@@ -516,7 +516,6 @@
         letter-spacing: 2px;
         text-transform: uppercase;
     }
-
     .product-logo {
         background-color: #ffffff;
         border-radius: 16px;
@@ -572,31 +571,86 @@
             }
         }
         p {
-            font-size: 1.125rem;
             margin: 16px 0;
         }
         ul {
             li {
-                &::before {
-                    content: "\f178";
-                    font-family: map-get($map: $theme-fonts, $key: "icons");
-                    margin-right: 4px;
-                }
                 + li {
-                    margin-top: 8px;
+                    margin-top: 16px;
                 }
                 span {
+                    display: block;
                     &:first-child {
                         font-weight: 600;
+                        &::before {
+                            color: map-get(
+                                $map: $theme-colors,
+                                $key: "secondary"
+                            );
+                        }
+                    }
+                    &::before {
+                        font-family: map-get($map: $theme-fonts, $key: "icons");
+
                         margin-right: 8px;
+                    }
+                    + span {
+                        font-size: 0.875rem;
+                        margin-top: 8px;
+                        &:before {
+                            content: "\f00c";
+                            padding-left: 24px;
+                        }
+                    }
+                }
+                &:first-child {
+                    span {
+                        &:first-child {
+                            &::before {
+                                content: "\f0c0";
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    span {
+                        &:first-child {
+                            &::before {
+                                content: "\f121";
+                            }
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    span {
+                        &:first-child {
+                            &::before {
+                                content: "\f49e";
+                            }
+                        }
+                    }
+                }
+                &:last-child {
+                    span {
+                        &:first-child {
+                            &::before {
+                                content: "\f57e";
+                            }
+                        }
                     }
                 }
             }
         }
     }
     .why-us-image {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
         @media (max-width: 1024.98px) {
             display: none;
         }
+    }
+    @media (max-width: 575.98px) {
+        padding-top: 36px;
     }
 }
