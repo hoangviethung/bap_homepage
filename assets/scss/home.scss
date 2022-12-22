@@ -314,7 +314,6 @@
     position: relative;
     background-color: map-get($map: $theme-colors, $key: "primary");
     background-repeat: no-repeat;
-    pointer-events: none;
     background-attachment: fixed;
     background-size: 100% 100%;
     > .container {
@@ -536,6 +535,68 @@
         img {
             width: 100%;
             height: auto;
+        }
+    }
+}
+
+.section-why-us {
+    position: relative;
+    padding-top: 72px;
+    &:after {
+        border-bottom-left-radius: 300px;
+        border-top-left-radius: 300px;
+        background-color: #f5f8ff;
+        content: "";
+        height: 400px;
+        position: absolute;
+        right: 0;
+        bottom: 32px;
+        width: calc(50% - 56px);
+        z-index: -1;
+        @media (max-width: 575.98px) {
+            width: 50%;
+        }
+    }
+    .why-us-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        @media (max-width: 1024.98px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    .why-us-content {
+        .title-default {
+            h2 {
+                font-family: map-get($map: $theme-fonts, $key: "title");
+            }
+        }
+        p {
+            font-size: 1.125rem;
+            margin: 16px 0;
+        }
+        ul {
+            li {
+                &::before {
+                    content: "\f178";
+                    font-family: map-get($map: $theme-fonts, $key: "icons");
+                    margin-right: 4px;
+                }
+                + li {
+                    margin-top: 8px;
+                }
+                span {
+                    &:first-child {
+                        font-weight: 600;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .why-us-image {
+        @media (max-width: 1024.98px) {
+            display: none;
         }
     }
 }

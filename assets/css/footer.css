@@ -1,1 +1,64 @@
-.footer-default{background-color:#051b3d;padding:72px 0 32px}.footer-default .footer-logo{width:150px;margin:0 auto}.footer-default .footer-logo img{filter:brightness(100)}.footer-default .footer-nav,.footer-default .footer-socials{display:flex;justify-content:center;gap:16px;margin-top:24px}.footer-default .footer-nav .nav__link,.footer-default .footer-socials .nav__link{color:#ffffff;font-size:0.75rem;font-weight:600;transition:0.3s all ease-in-out}.footer-default .footer-nav .nav__link:hover,.footer-default .footer-socials .nav__link:hover{color:#0057e2}.footer-default .footer-nav .social__link,.footer-default .footer-socials .social__link{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background-color:#ffffff;color:#020e21;border-radius:50%;transition:0.3s all ease-in-out}.footer-default .footer-nav .social__link:hover,.footer-default .footer-socials .social__link:hover{color:#ffffff;background-color:#0057e2}.footer-default .copyright{color:#ffffff;margin-top:32px;font-family:"Signika";padding-top:32px;border-top:1px solid rgba(255,255,255,0.08);text-align:center}
+.footer-default {
+  background-color: #051b3d;
+  padding: 72px 0 32px;
+}
+
+.footer-default .footer-logo {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.footer-default .footer-logo img {
+  filter: brightness(100);
+}
+
+.footer-default .footer-nav,
+.footer-default .footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.footer-default .footer-nav .nav__link,
+.footer-default .footer-socials .nav__link {
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: 0.3s all ease-in-out;
+}
+
+.footer-default .footer-nav .nav__link:hover,
+.footer-default .footer-socials .nav__link:hover {
+  color: #0057e2;
+}
+
+.footer-default .footer-nav .social__link,
+.footer-default .footer-socials .social__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #020e21;
+  border-radius: 50%;
+  transition: 0.3s all ease-in-out;
+}
+
+.footer-default .footer-nav .social__link:hover,
+.footer-default .footer-socials .social__link:hover {
+  color: #ffffff;
+  background-color: #0057e2;
+}
+
+.footer-default .copyright {
+  color: #ffffff;
+  margin-top: 32px;
+  font-family: "Signika";
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+/*# sourceMappingURL=footer.css.map */
