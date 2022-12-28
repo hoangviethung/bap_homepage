@@ -1,13 +1,13 @@
 .section-global-company {
     background-color: map-get($map: $theme-colors, $key: "primary");
-    padding: 100px 0;
+    padding: 64px 0 32px;
     position: relative;
     z-index: 0;
     .global-wrapper {
-        align-items: start;
+        align-items: flex-end;
         display: grid;
         gap: 30px;
-        grid-template-columns: 450px 1fr;
+        grid-template-columns: 450px auto;
         @media (max-width: 1199.98px) {
             grid-template-columns: 1fr;
             align-items: center;
@@ -59,10 +59,14 @@
     }
     .image-column {
         position: relative;
+        max-width: 700px;
+        margin: 0 auto;
         img {
             width: 100%;
-            height: auto;
+            height: 100%;
             pointer-events: none;
+            object-fit: cover;
+            object-position: center center;
         }
         .marker {
             cursor: pointer;
@@ -112,12 +116,13 @@
     .location__item {
         position: absolute;
         left: 0;
-        top: 0;
+        top: 50%;
         width: 100%;
+        transform: translateY(-50%);
         height: fit-content;
         background: rgba($color: #ffffff, $alpha: 0.2);
         display: flex;
-        opacity: 0;
+        opacity: 0 !important;
         transition: 0.3s all ease-in-out;
         pointer-events: none;
         display: grid;
@@ -127,7 +132,7 @@
         border-radius: 24px;
         backdrop-filter: blur(4px);
         &.show {
-            opacity: 1;
+            opacity: 1 !important;
             pointer-events: visible;
         }
         img {
@@ -174,9 +179,19 @@
                     content: "\f3c5";
                 }
             }
-            &:last-child {
+            &:nth-child(3) {
                 &:before {
                     content: "\f095";
+                }
+            }
+            &:nth-child(4) {
+                &:before {
+                    content: "\f017";
+                }
+            }
+            &:last-child {
+                &:before {
+                    content: "\f279";
                 }
             }
             + li {

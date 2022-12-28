@@ -12,7 +12,7 @@
                 (this._html = $("html"));
         },
         methods: function (e) {
-            imJs.stickyHeader();
+            // imJs.stickyHeader();
             imJs.hoverOffices();
             if ($(window).width() > 1200) {
                 imJs.hoverHeaderMenuItem();

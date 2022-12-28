@@ -22,6 +22,9 @@
             border-bottom-right-radius: 8px;
         }
     }
+    .title-default {
+        text-align: center;
+    }
     .our-services {
         margin-top: 40px;
         display: grid;
@@ -112,9 +115,9 @@
                 box-shadow: 0 4px 50px 0 #0000001a;
                 display: block;
                 grid-area: image;
-                margin-bottom: 24px;
-                max-width: 100%;
+                max-width: 350px;
                 object-fit: cover;
+                margin: 0 auto 24px;
             }
             p {
                 text-align: center;
