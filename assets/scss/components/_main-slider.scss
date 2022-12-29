@@ -54,11 +54,23 @@
                     margin-left: 16px;
                 }
             }
-            &.btn-secondary {
-                @extend .btn-secondary-2;
+            &:not(.btn-secondary):not(.btn-primary) {
+                color: #ffffff;
             }
             &.btn-outline-secondary {
-                color: #ffffff;
+                border-color: #ffffff;
+                &:hover {
+                    border-color: rgba(
+                        $color:
+                            map-get($map: $theme-colors, $key: "secondary-2"),
+                        $alpha: 0.5
+                    );
+                    background-color: rgba(
+                        $color:
+                            map-get($map: $theme-colors, $key: "secondary-2"),
+                        $alpha: 0.5
+                    );
+                }
             }
         }
     }
