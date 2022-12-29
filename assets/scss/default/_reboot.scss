@@ -1,6 +1,7 @@
 :root {
     --color-primary: #{map-get($map: $theme-colors, $key: "primary")};
     --color-secondary: #{map-get($map: $theme-colors, $key: "secondary")};
+    --color-secondary-2: #{map-get($map: $theme-colors, $key: "secondary-2")};
     --color-txt-body: #{map-get($map: $theme-colors, $key: "txt-body")};
     --color-txt-disable: #{map-get($map: $theme-colors, $key: "txt-disable")};
     --color-background-1: #{map-get($map: $theme-colors, $key: "background-1")};

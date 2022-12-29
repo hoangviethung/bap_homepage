@@ -102,63 +102,63 @@
             }
         }
         .tab-pane {
-            padding: 0 40px 45px;
             position: relative;
             display: none;
-            > * {
-                position: relative;
-                z-index: 2;
+            border: 4px solid #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 50px 0 #0000001a;
+            overflow: hidden;
+            .service-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 10;
+                padding: 16px;
             }
             img {
-                border: 4px solid #ffffff;
-                border-radius: 10px;
-                box-shadow: 0 4px 50px 0 #0000001a;
                 display: block;
-                grid-area: image;
-                max-width: 350px;
                 object-fit: cover;
-                margin: 0 auto 24px;
+                object-position: center center;
             }
             p {
+                color: #ffffff;
                 text-align: center;
             }
             .call-to-actions {
                 display: flex;
                 justify-content: center;
                 gap: 16px;
-            }
-            .btn {
-                color: map-get($map: $theme-colors, $key: "secondary");
-                &:hover {
-                    color: lighten(
-                        $color: map-get($map: $theme-colors, $key: "secondary"),
-                        $amount: 20%
-                    );
-                }
-            }
-            &:after {
-                border-radius: 30px;
-                bottom: 0;
-                content: "";
-                height: calc(100% - 70px);
-                left: 0;
-                opacity: 0.1;
-                position: absolute;
-                width: 100%;
-                background-color: #bbbbbb;
-                z-index: 1;
-                @media (max-width: 767.98px) {
-                    border-radius: 10px;
-                }
-                @media (max-width: 575.98px) {
-                    content: none;
+                padding-top: 16px;
+                .btn {
+                    color: map-get($map: $theme-colors, $key: "secondary");
+                    background-color: #ffffff;
+                    &:hover {
+                        color: lighten(
+                            $color:
+                                map-get($map: $theme-colors, $key: "secondary"),
+                            $amount: 20%
+                        );
+                    }
                 }
             }
             &.show {
                 display: block;
             }
-            @media (max-width: 575.98px) {
-                padding: 0;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                background-color: rgba($color: #000000, $alpha: 0.6);
+                z-index: 5;
             }
         }
         @media (max-width: 1199.98px) {

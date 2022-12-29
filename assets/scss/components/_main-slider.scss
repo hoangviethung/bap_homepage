@@ -54,8 +54,10 @@
                     margin-left: 16px;
                 }
             }
-            &:not(.btn-secondary),
-            &:not(.btn-primary) {
+            &.btn-secondary {
+                @extend .btn-secondary-2;
+            }
+            &.btn-outline-secondary {
                 color: #ffffff;
             }
         }
