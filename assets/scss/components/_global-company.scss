@@ -191,8 +191,9 @@
                 }
             }
             &:last-child {
+                padding-left: 0;
                 &:before {
-                    content: "\f279";
+                    content: "";
                 }
             }
             + li {
