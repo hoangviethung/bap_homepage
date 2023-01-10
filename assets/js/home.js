@@ -27,12 +27,14 @@
                 autoplay: {
                     delay: 5000,
                 },
-                effect: "cards",
                 pagination: {
                     el: ".main-slider-swiper .swiper-pagination",
                     clickable: true,
                 },
                 on: {},
+                breakpoints: {
+                    1024: { effect: "cards" },
+                },
             });
         },
         counterNumberAnimation(qSelector, start = 0, end, duration = 1000) {
@@ -63,54 +65,29 @@
         },
         initSliderClients() {
             const swiperHeroBanner01 = new Swiper(".clients-swiper--01", {
-                slidesPerView: 3,
+                slidesPerView: 3.8,
                 spaceBetween: 16,
-                freeMode: true,
-                speed: 3000,
+                centeredSlides: true,
                 loop: true,
-                autoplay: {
-                    delay: 1000,
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 24,
-                    },
-                    1024: {
-                        slidesPerView: 6,
-                    },
-                    1200: {
-                        slidesPerView: 8,
-                    },
-                    1600: {
-                        slidesPerView: 10,
-                        spaceBetween: 32,
-                    },
-                },
-                on: {},
-            });
-            const swiperHeroBanner02 = new Swiper(".clients-swiper--02", {
-                slidesPerView: 3,
-                spaceBetween: 16,
-                loop: true,
-                freeMode: true,
-                speed: 3000,
+                speed: 1500,
                 autoplay: {
                     delay: 1500,
                 },
                 breakpoints: {
                     768: {
-                        slidesPerView: 4,
+                        slidesPerView: 4.5,
                         spaceBetween: 24,
                     },
                     1024: {
-                        slidesPerView: 6,
+                        slidesPerView: 6.5,
+                        spaceBetween: 24,
                     },
                     1200: {
-                        slidesPerView: 8,
+                        slidesPerView: 8.5,
+                        spaceBetween: 24,
                     },
                     1600: {
-                        slidesPerView: 10,
+                        slidesPerView: 10.5,
                         spaceBetween: 32,
                     },
                 },
@@ -136,20 +113,21 @@
             const swiperFeaturedProjects = new Swiper(
                 ".featured-projects-swiper .swiper",
                 {
-                    slidesPerView: 1,
+                    slidesPerView: 2.4,
                     simulateTouch: false,
                     autoplay: {
                         delay: 5000,
                     },
-                    spaceBetween: 16,
+                    spaceBetween: 4,
                     navigation: {
                         nextEl: ".featured-projects-swiper .swiper-button-next",
                         prevEl: ".featured-projects-swiper .swiper-button-prev",
                     },
+                    loop: true,
                     breakpoints: {
-                        575: { slidesPerView: 2 },
-                        1024: {
-                            slidesPerView: 3,
+                        768: {
+                            slidesPerView: 3.4,
+                            spaceBetween: 8,
                         },
                         1200: {
                             slidesPerView: 4,
@@ -162,28 +140,30 @@
             const swiperStartupProducts = new Swiper(
                 ".startup-products-swiper",
                 {
-                    slidesPerView: 3,
+                    slidesPerView: 3.8,
                     spaceBetween: 16,
+                    centeredSlides: true,
                     loop: true,
-                    freeMode: true,
-                    speed: 3000,
+                    speed: 1500,
                     autoplay: {
                         delay: 1500,
                     },
                     breakpoints: {
                         768: {
-                            slidesPerView: 4,
+                            slidesPerView: 4.5,
                             spaceBetween: 24,
                         },
                         1024: {
-                            slidesPerView: 6,
+                            slidesPerView: 6.5,
+                            spaceBetween: 24,
                         },
                         1200: {
-                            slidesPerView: 8,
+                            slidesPerView: 8.5,
+                            spaceBetween: 24,
                         },
                         1600: {
-                            slidesPerView: 10,
-                            spaceBetween: 32,
+                            slidesPerView: 10.6,
+                            spaceBetween: 56,
                         },
                     },
                     on: {},

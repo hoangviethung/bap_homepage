@@ -1,9 +1,7 @@
 (function ($) {
     "use strict";
-
     $(document).ready(function () {
         "use strict";
-
         const progressPath = document.querySelector(
             ".roger-progress-parent path",
         );

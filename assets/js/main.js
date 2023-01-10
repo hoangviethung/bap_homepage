@@ -12,15 +12,13 @@
                 (this._html = $("html"));
         },
         methods: function (e) {
-            // imJs.stickyHeader();
+            imJs.toggleMenuMobile();
+            imJs.initNavigationMobile();
             imJs.hoverOffices();
-            if ($(window).width() > 1200) {
-                imJs.hoverHeaderMenuItem();
-            }
-            if ($(window).width() < 1200) {
-                imJs.toggleMenuMobile();
+            imJs.hoverHeaderMenuItem();
+            $(window).resize(function () {
                 imJs.initNavigationMobile();
-            }
+            });
         },
         hoverHeaderMenuItem: function (e) {
             let previous_menu_item_hovered;
@@ -105,9 +103,16 @@
             }
         },
         initNavigationMobile() {
-            $(".nav-sub-items-wrapper")
-                .parent(".nav__item")
-                .addClass("has-sub-nav-mobile");
+            if ($(window).width() < 1200) {
+                $(".nav-sub-items-wrapper")
+                    .parent(".nav__item")
+                    .addClass("has-sub-nav-mobile");
+            } else {
+                $(".header-nav__items .nav__item").removeClass(
+                    "has-sub-nav-mobile",
+                );
+            }
+
             $(".has-sub-nav-mobile").on("click", function () {
                 $(".has-sub-nav-mobile")
                     .not(this)
@@ -127,6 +132,16 @@
             );
         },
         hoverOffices() {
+            const first_office = $(".countries .country__item").eq(0);
+            const target_id_first_office = first_office.attr("target");
+            first_office.addClass("active");
+            $(
+                `.section-global-company .image-map .marker[target=${target_id_first_office}]`,
+            ).addClass("active");
+            $(
+                `.section-global-company .location__item[id=${target_id_first_office}]`,
+            ).addClass("show");
+            //Hover
             $(".section-global-company [target]").hover(
                 function () {
                     // over
@@ -158,42 +173,21 @@
                     // out
                 },
             );
-            $(".section-global-company .location__item").hover(
+
+            $(".section-global-company .navigation-mobile .next").on(
+                "click",
                 function () {
-                    // over
-                },
-                function () {
-                    // out
-                    $(".section-global-company [target]").removeClass("active");
-                    $(this).removeClass("show");
+                    const current_office = $(
+                        ".section-global-company .location__item.show",
+                    );
+                    let target_id_current_office = current_office.attr("id");
+                    $(
+                        `.section-global-company .location__item[id="${target_id_current_office++}"]`,
+                    ).addClass("show");
+                    // current_office.removeClass("show");
+                    console.log((target_id_current_office += 1));
                 },
             );
-        },
-        backToTopInit: function () {
-            // declare variable
-            const scrollTop = $(".backto-top");
-            $(window).scroll(function () {
-                // declare variable
-                const topPos = $(this).scrollTop();
-                // if user scrolls down - show scroll to top button
-                if (topPos > 100) {
-                    $(scrollTop).css("opacity", "1");
-                } else {
-                    $(scrollTop).css("opacity", "0");
-                }
-            });
-
-            //Click event to scroll to top
-            $(scrollTop).on("click", function () {
-                $("html, body").animate(
-                    {
-                        scrollTop: 0,
-                        easingType: "linear",
-                    },
-                    500,
-                );
-                return false;
-            });
         },
     };
     imJs.m();
