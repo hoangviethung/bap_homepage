@@ -112,14 +112,15 @@
                     "has-sub-nav-mobile",
                 );
             }
-
-            $(".has-sub-nav-mobile").on("click", function () {
-                $(".has-sub-nav-mobile")
-                    .not(this)
-                    .find(".nav-sub-items-wrapper")
-                    .slideUp();
-                $(this).find(".nav-sub-items-wrapper").slideToggle();
-            });
+            $(".nav__item.has-sub-nav-mobile")
+                .unbind("click")
+                .click(function () {
+                    $(this).find(".nav-sub-items-wrapper").slideToggle();
+                    $(".has-sub-nav-mobile")
+                        .not(this)
+                        .find(".nav-sub-items-wrapper")
+                        .slideUp();
+                });
         },
         toggleMenuMobile() {
             $(".header-default .headertoggle-full-navigation").on(

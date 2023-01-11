@@ -16,6 +16,13 @@
         content: "";
         pointer-events: none;
     }
+    @media (max-width: 1024.98px) {
+        padding-top: $height-header;
+        min-height: 350px;
+    }
+    @media (max-width: 575.98px) {
+        min-height: 250px;
+    }
 }
 
 .page-title-wrapper {
@@ -27,6 +34,9 @@
         font-family: map-get($map: $theme-fonts, $key: "title");
         @media (max-width: 1024.98px) {
             font-size: 3.5rem;
+        }
+        @media (max-width: 575.98px) {
+            font-size: 2rem;
         }
     }
 }
