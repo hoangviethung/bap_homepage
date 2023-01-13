@@ -28,10 +28,12 @@
                 jQuery(".roger-progress-parent").addClass(
                     "roger-backto-top-active",
                 );
+                jQuery(".button-play-video-fixed").addClass("active");
             } else {
                 jQuery(".roger-progress-parent").removeClass(
                     "roger-backto-top-active",
                 );
+                jQuery(".button-play-video-fixed").removeClass("active");
             }
         });
         jQuery(".roger-progress-parent").on("click", function (event) {

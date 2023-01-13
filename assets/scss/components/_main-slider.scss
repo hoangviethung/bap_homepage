@@ -60,7 +60,8 @@
         .btn {
             span {
                 ~ i {
-                    margin-left: 16px;
+                    font-size: 1.125rem;
+                    margin-left: 8px;
                     @media (max-width: 1024.98px) {
                         display: none;
                     }

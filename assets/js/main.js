@@ -178,15 +178,22 @@
             $(".section-global-company .navigation-mobile .next").on(
                 "click",
                 function () {
+                    const max_office = $(
+                        ".section-global-company .location__item",
+                    ).length;
                     const current_office = $(
                         ".section-global-company .location__item.show",
                     );
-                    let target_id_current_office = current_office.attr("id");
+                    let target_id_current_office = Number(
+                        current_office.attr("id"),
+                    );
+                    if (target_id_current_office == max_office) {
+                        target_id_current_office = 1;
+                    }
                     $(
-                        `.section-global-company .location__item[id="${target_id_current_office++}"]`,
+                        `.section-global-company .location__item[id="${(target_id_current_office += 1)}"]`,
                     ).addClass("show");
-                    // current_office.removeClass("show");
-                    console.log((target_id_current_office += 1));
+                    current_office.removeClass("show");
                 },
             );
         },
