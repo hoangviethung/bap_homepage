@@ -196,6 +196,29 @@
                     current_office.removeClass("show");
                 },
             );
+
+            $(".section-global-company .navigation-mobile .prev").on(
+                "click",
+                function () {
+                    const max_office = $(
+                        ".section-global-company .location__item",
+                    ).length;
+                    const current_office = $(
+                        ".section-global-company .location__item.show",
+                    );
+                    let target_id_current_office = Number(
+                        current_office.attr("id"),
+                    );
+                    if (target_id_current_office == 1) {
+                        target_id_current_office = max_office;
+                    }
+                    console.log(target_id_current_office);
+                    $(
+                        `.section-global-company .location__item[id="${(target_id_current_office -= 1)}"]`,
+                    ).addClass("show");
+                    current_office.removeClass("show");
+                },
+            );
         },
     };
     imJs.m();
