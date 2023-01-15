@@ -1,0 +1,14 @@
+extends ../layouts/layout
+
+block params
+    - class_body = "about-page"
+    - title_page = "BAP Software - Section About Video"
+block css
+    link(rel="stylesheet", href="./assets/css/section-about-video.css")
+block main
+    div(style="height:500px; background-color:gray")
+    section.section-about-video
+        a(data-fancybox href="https://www.youtube.com/watch?v=qv_v7JtetOs&ab_channel=BAPSoftware")
+            i.fa.fa-play
+        video(autoplay muted loop)
+            source(src="../assets/videos/video-demo.mp4")
